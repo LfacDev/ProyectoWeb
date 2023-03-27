@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* PALETA DE COLORES */
+/* #70AF31 #fff  */
+
+/* LOGIN */
+
+.main{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../content/img/galeria1\ \(4\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+.container-form{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bienvenido{
+    width: 45%;
+    display: flex;
+    align-items: center; /* poner el elemento en el centro del viewport */
+    text-align: center;
+    
+}
+
+.mensaje{
+    margin: 30px;
+
+}
+
+.mensaje>h2{
+    padding-bottom: 35px;
+    font-size: 35px;
+}
+
+.mensaje>p{
+    font-size: 25px;
+    padding-bottom: 35px;
+}
+
+.btn{
+    padding: 20px 35px;
+    font-size: 22px;
+    border-radius: 50px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.formulario{
+    width: 47%;
+    border-radius: 30px;
+    margin: 0 30px;
+    align-items: center;
+    text-align: center;
+    padding:25px 25px 0 25px;
+    background-color: rgba(59, 58, 58, 0.792);
+
+}
+
+.crear-cuenta {
+    font-size: 2.3rem;
+}
+
+.iconos{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.icono{
+    padding: 15px;
+    border: #fff solid 2px;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+.icono:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.formulario>p{
+    margin-top: 20px;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.formulario input{
+    
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+    padding: 20px; 
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: solid 2px #fff;
+}
+
+.formulario input[type="button"]{
+    margin-top: 50px;
+    border: #fff 2px solid;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.registrarse{
+    position: absolute; /* para que tome todo el ancho del padre */
+    opacity: 0; 
+    visibility: hidden; 
+    transition: ease 0.3s;
+}
+
+/* clases puestas con JS */
+.registrarse.active{
+    transition: ease 0.5s;
+    opacity: 1;
+    visibility: visible;
+} 
+
+.iniciar.active{
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+
+/* INDEX */
+.bodyIndex{
+    height: 100vh;
+    background-image: url("../content/img/Abstract\ green\ painting\ background.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.mainIndex{
+    font-family: 'passion one', sans-serif;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fondo2{
+    width: 20%;
+    height: 100%;
+    background-image: url("../content/img/YURISA.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* left: 5rem; */
+    order: 9;   
+
+}
+
+.sectionIndex{
+    width: 40%;
+    margin: 100px;   
+    align-items: center;
+    text-align: center; 
+}
+
+.sectionIndex h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.sectionIndex h2{
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.sectionIndex input{
+    font-family: 'passion one', sans-serif;
+    margin: 20px;
+    border-radius: 50px;
+    padding: 25px 30px;
+    font-size: 30px;
+    border: none;
+    color: #70AF31;
+    cursor: pointer;
+}
+
+.sectionIndex2{
+    width: 20%;
+    display: flex;
+}
+
+.img1{
+    filter:drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+    width: 250px;
+    height: 250px;
+    z-index: 98;
+    position: relative;
+    right: 19rem;
+    order: 1;
+}
+
+.img2{
+    width: 700px;
+    height: 700px;
+    z-index: 99;
+    margin-top: 40px;
+    position: relative;
+    right: 6rem;
+    filter:drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5)); 
+}
+
+.iconoIndex{
+    margin-top: 200px;
+    z-index: 97;
+    position: relative;
+    left: 15rem;
+    font-size: 60px;
+}
+
+.iconoI{
+    margin: 20px;
+}
+
+.iconoI:hover{
+    color: #70AF31;
+    cursor: pointer;
+}
+
+
+/* clases con JS */
+
+.fondo2T{
+    transition: unset .3s;
+    background:url("../content/img/Download\ wallpaper\ 480x800\ red\,\ background\,\ texture\ nokia\ x\,\ x2\,\ xl\,\ 520\,\ 620\,\ 820\,\ samsung\ galaxy\ star\,\ ace\,\ asus\ zenfone\ 4\ hd\ background.jfif");
+    background-repeat: no-repeat;
+    background-size:85%;
+    position: relative;
+}
+
+.inputT{
+    color: #D93D59 !important; 
+}
+
+.IconoT:hover{
+    color:#D93D59
+}
+
+.img1T{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 7rem;
+}
+
+

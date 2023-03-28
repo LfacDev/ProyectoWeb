@@ -274,4 +274,44 @@
     bottom: 7rem;
 }
 
+/* HOME VEGANO */
+
+/* NAV */
+
+
+/* SLIDER */
+
+/* tamaño contenedor */
+.containerS{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider{
+    background-color: #D93D59;
+    padding: 40px 0;
+}
+
+/* pondremos display flex para organizar el slider */
+.slider_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px; /* aqui seran 50px para el icono, 1fr para la imagen, y 50px para el otro icono  */
+}
+
+.slider_body{
+    /* le decimos a los elementos que empiecen en la linea 2 de la columna y terminen en la 3 */
+    grid-column: 2/3;
+    /* en la fila que empiecen en la linea uno y terminen en la 2 */
+    grid-row: 1/2;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.slider_body--mostrar{
+    opacity: 1;
+}
+
+
+
 

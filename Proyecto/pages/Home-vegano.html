@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Divine</title>
 </head>
 <body>
@@ -17,20 +17,25 @@
             <li><a href="./Reservas.html">Reservas</a></li>
         </nav>
     </header>
-    <main>
-        <section>
-            <ul>
-                <li>
-                    <img src="./content/img/imgSlider1.jpg" alt="Comida vegana">
-                </li>
-                <li>
-                    <img src="./content/img/imgSlider2.jpg" alt="Comida vegana">
-                </li>
-                <li>
-                    <img src="./content/img/imgSlider3.jpg" alt="Comida vegana">
-                </li>
-            </ul>
-        </section>
+    <main class="slider">
+         <section class="slider_container containerS">
+            <img src="../content/svg/arrowL.svg" class="slider_arrow" id="antes" alt="">
+
+                 <section class="slider_body slider_body--mostrar" data-id="1">
+                      <img class="slider_img" src="../content/img/imgSlider1.jpg" alt="">
+                 </section>
+
+                 <section class="slider_body" data-id="2">
+                      <img class="slider_img" src="../content/img/imgSlider2.jpg" alt="">
+                 </section>
+
+                 <section class="slider_body" data-id="3">
+                     <img class="slider_img" src="../content/img/imgSlider3.jpg"  alt="">
+                 </section>
+
+            <img src="../content/svg/arrowR.svg" class="slider_arrow" id="despues" alt="">
+         </section>
+
         <section>
             <h2>
                 ESPECIALIDADES DE LA CASA
@@ -56,21 +61,21 @@
             </h2>
             <hr>
             <div>
-                <img src="../content/img/abillion-i4jrjvPQCXQ-unsplash.jpg" alt="Comida vegana">
+                <img src="../content/img/abillion-i4jrjvPQCXQ-unsplash.jpg" width="500px" alt="Comida vegana">
                 <h3>Sushi and Relax</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                 <b>25800</b>
                 <button>Reserva</button>
             </div>
             <div>
-                <img src="../content/img/ruth-georgiev-dvmiNXMh9d8-unsplash.jpg" alt="Comida vegana">
+                <img src="../content/img/ruth-georgiev-dvmiNXMh9d8-unsplash.jpg" width="500px" alt="Comida vegana">
                 <h3>Postres y mas</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 <b>21000</b>
                 <button>Reserva</button>
             </div>
             <div>
-                <img src="../content/img/brooke-lark-HjWzkqW1dgI-unsplash.jpg" alt="">
+                <img src="../content/img/brooke-lark-HjWzkqW1dgI-unsplash.jpg" width="500px" alt="">
                 <h3>Cocteles y cafe</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                 <b>12000</b>
@@ -96,7 +101,7 @@
             <h2>ENCUENTRANOS AQUI</h2>
             <hr>
             <iframe src="" frameborder="0"></iframe>
-            <img src="../content/img/sarah-hpn4yMPujK4-unsplash.jpg" alt="restaurante">
+            <img src="../content/img/sarah-hpn4yMPujK4-unsplash.jpg" width="500px" alt="restaurante">
         </section>
     </main>
 
@@ -110,5 +115,6 @@
         <h3>Direccion</h3>
         <p>Cll 85 #78 - 25 Chapinero</p>
     </footer>
+    <script src="../this/main.js"></script>
 </body>
 </html>

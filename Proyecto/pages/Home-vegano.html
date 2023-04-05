@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Divine</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <li><a href="./Home-vegano.html">Inicio</a></li>
-            <li><a href="./menu-vegano.html">Menu</a></li>
-            <li><a href="./galeria-vegano.html">Galeria</a></li>
-            <i></i>
-            <li><a href="./Reservas.html">Reservas</a></li>
+<body class="bodyV">
+    <header class="home_headerV">
+        <img src="../content/logos/logo-divine2.png" alt="icono" class="iconoHV">
+        <nav class="nav_vegan">
+            <li class="dato"><a class="menu" href="./Home-vegano.html">Inicio</a></li>
+            <li class="dato"><a class="menu" href="./menu-vegano.html">Menu</a></li>
+            <li class="dato"><a class="menu" href="./galeria-vegano.html">Galeria</a></li>
+            <li class="dato"><a class="menu" href="./Reservas.html">Reservas</a></li>
+            <li><a class="user" href="./login.html"><i class="fi fi-tr-circle-user "></i></a></li>
         </nav>
     </header>
-    <main class="slider">
-         <section class="slider_container containerS">
-            <img src="../content/svg/arrowL.svg" class="slider_arrow" id="antes" alt="">
+    <main class="Home_main">
+         <section class="Home_slider" >
+            <section class="Contenedor_slider" id="Contenedor_slider">
+                <img src="../content/img/imgSlider1.jpg" alt="ds1" class="slider_img">
+                <img src="../content/img/imgSlider2.jpg" alt="ds2" class="slider_img">
+                <img src="../content/img/imgSlider3.jpg" alt="ds3" class="slider_img">
+                <!-- <img class="slider_img" src="../content/img/imgSlider1.jpg" alt="imagen">
+                <img class="slider_img" src="../content/img/imgSlider2.jpg" alt="imagen">
+                <img class="slider_img" src="../content/img/imgSlider3.jpg"  alt="imagen"> -->
+            </section>
+            
+           <ul class="puntos">
+            <li class="punto activo" id="punto"></li>
+            <li class="punto" id="punto"></li>
+            <li class="punto" id="punto"></li>
+           </ul>
 
-                 <section class="slider_body slider_body--mostrar" data-id="1">
-                      <img class="slider_img" src="../content/img/imgSlider1.jpg" alt="">
-                 </section>
-
-                 <section class="slider_body" data-id="2">
-                      <img class="slider_img" src="../content/img/imgSlider2.jpg" alt="">
-                 </section>
-
-                 <section class="slider_body" data-id="3">
-                     <img class="slider_img" src="../content/img/imgSlider3.jpg"  alt="">
-                 </section>
-
-            <img src="../content/svg/arrowR.svg" class="slider_arrow" id="despues" alt="">
          </section>
 
         <section>

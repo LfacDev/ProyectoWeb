@@ -63,4 +63,58 @@ const img1 = document.querySelector("#img1");
         }
     }); 
 
+
+/* HOME-VEGANO */
+
+const homeSlider = document.querySelector("#Contenedor_slider"),
+      punto  = document.querySelectorAll("#punto");
+
+      /* recorremos los puntos */
+      punto.forEach((cadaPunto, i )=>{
+        
+         /* a cada punto le hacemos un evento de escucha de tipo click */
+         punto[i].addEventListener("click", ()=>{
+            /* obtener la posicion del punto */
+            let posicion = i;
+
+            /* aplicar un trasnform al homeSlider */
+            /* operacion = posicion * -33.33 esto para que las imagenes e vayan desplzando a nedida que presionamos los botones */
+            let operacion = posicion * -33.33;
+            homeSlider.style.transform = `translateX(${operacion}%)`;
+
+            
+            /* quitamos la clase activo a todos los puntos */
+            punto.forEach(( cadaPunto, i) =>{
+                punto[i].classList.remove('activo');
+            });
+            //le ponemos la clase activo al punto seleccionado
+            punto[i].classList.add('activo');
+            
+         });
+
+      })
+       homeSlider.style.transform = `translateX(${0}%)`;
+
+       /* tiene un retraso por el setTimeout de 6000 */
+       let contador = 0;
+
+      setInterval(()=>{
+            homeSlider.style.transform = `translateX(${-33.33*contador}%)`;
+            contador++;
+            console.log(contador);
+        
+        if(contador>=2){
+            setTimeout(()=>{
+            homeSlider.style.transform = `translateX(${0}%)`; 
+            contador=0;
+
+            },6000)
+        }
+      },4000)
+
+
+     
+
+      
+
     

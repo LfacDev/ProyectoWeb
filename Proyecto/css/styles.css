@@ -274,43 +274,148 @@
     bottom: 7rem;
 }
 
-/* HOME VEGANO */
+/************************** HOME VEGANO *******************************/
+/* BODY */
+.bodyV{
+    background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+}
 
-/* NAV */
+
+/* HEADER - NAV */
+
+.home_headerV{
+    height: 10vh;
+    background-color: #70AF31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_vegan{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 40px;
+    align-items: center;
+}
+
+.iconoHV{
+    margin: 40px; 
+    height: 100px;
+}
+
+.user{
+   font-size: 35px;
+   color: #fff;
+   text-decoration: none;
+   transition: .3s;
+}
+
+.user:hover{
+    font-size: 40px;
+ }
+
+.dato{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.dato .menu{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: all .3s;
+    
+}
+
+.menu:hover{
+    font-size:23px;
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.dato::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #42770c;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.dato:hover:after{
+    width: 100%;
+    right: 0;
+}
+
 
 
 /* SLIDER */
 
 /* tamaño contenedor */
-.containerS{
+.Home_main{
+    width: 100%;
+}
+
+.Home_slider{
     width: 90%;
+    height: 625px;
+    background-color: rgb(17, 83, 141);
     margin: 0 auto;
+    max-width: 120em;
     overflow: hidden;
+   
 }
 
-.slider{
-    background-color: #D93D59;
-    padding: 40px 0;
+.Contenedor_slider{
+    /* porque son 3 imagenes */
+    width: 300%;
+    /* para que las imagenes se pongan una a lado de la otra */
+    display: flex;
+    align-items: center;
+    /* transition */
+    transition: all .5s ease;
+    transform: translateX(-66.66%);
+
 }
 
-/* pondremos display flex para organizar el slider */
-.slider_container{
-    display: grid;
-    grid-template-columns: 50px 1fr 50px; /* aqui seran 50px para el icono, 1fr para la imagen, y 50px para el otro icono  */
+.slider_img{
+    background-color: #70AF31;
+    /* calcular el tamaño que debera cada imagen */
+    width: calc(100% / 3);
+    height: 570px;
+    object-fit: cover; /* ajustar la imagen al contenedor */
+    
 }
 
-.slider_body{
-    /* le decimos a los elementos que empiecen en la linea 2 de la columna y terminen en la 3 */
-    grid-column: 2/3;
-    /* en la fila que empiecen en la linea uno y terminen en la 2 */
-    grid-row: 1/2;
-    opacity: 0;
-    transition: opacity 1.5s;
+.puntos{
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+   
 }
 
-.slider_body--mostrar{
-    opacity: 1;
+.punto{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #719053;
 }
+
+.activo{
+    background-color: #70AF31;
+}
+
 
 
 

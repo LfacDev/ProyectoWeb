@@ -145,7 +145,7 @@
 }
 
 
-/* INDEX */
+/*************************************** INDEX *****************************************/
 .bodyIndex{
     height: 100vh;
     background-image: url("../content/img/Abstract\ green\ painting\ background.jfif");
@@ -274,43 +274,902 @@
     bottom: 7rem;
 }
 
-/* HOME VEGANO */
+/*************************************** HOME VEGANO ************************************/
+/*---------- BODY--------------- */
+.bodyV{
+    background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+}
 
-/* NAV */
+
+/*------- HEADER - NAV -------------*/
+
+.home_headerV{
+    height: 10vh;
+    background-color: #70AF31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_vegan{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 40px;
+    align-items: center;
+}
+
+.iconoHV{
+    margin: 40px; 
+    height: 100px;
+}
+
+.user{
+   font-size: 35px;
+   color: #fff;
+   text-decoration: none;
+   transition: .3s;
+}
+
+.user:hover{
+    font-size: 40px;
+    
+ }
+
+.dato{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.dato .menu{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: all .3s;
+    
+}
+
+.menu:hover{
+    font-size:23px;
+    letter-spacing: 1.5px;
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.dato::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #42770c;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.dato:hover:after{
+    width: 100%;
+    right: 0;
+}
 
 
-/* SLIDER */
+/*----- SLIDER------ */
 
 /* tamaño contenedor */
-.containerS{
+.Home_main{
+    width: 100%;
+}
+
+.Home_slider{
+    width: 90%;
+    height: 625px;
+    background-color: rgb(17, 83, 141);
+    margin: 0 auto;
+    max-width: 120em;
+    overflow: hidden;
+   
+}
+
+.Contenedor_slider{
+    /* porque son 3 imagenes */
+    width: 300%;
+    /* para que las imagenes se pongan una a lado de la otra */
+    display: flex;
+    align-items: center;
+    /* transition */
+    transition: all .5s ease;
+    transform: translateX(0%);
+
+}
+
+.slider_img{
+    background-color: #70AF31;
+    /* calcular el tamaño que debera cada imagen */
+    width: calc(100% / 3);
+    height: 570px;
+    object-fit: cover; /* ajustar la imagen al contenedor */
+    
+}
+
+.puntos{
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+   
+}
+
+.punto{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #719053;
+}
+
+.activo{
+    background-color: #70AF31;
+}
+
+/*---- SECCION ESPECIALIDADES----- */  
+
+.especialidades{
     width: 90%;
     margin: 0 auto;
+}
+
+.especialidades>h1{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.containerHV{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img_container{
+    display: flex;
+    align-items: center;
+   
+}
+
+.imgHV2{
+    width: 300px;
+    height: 200px;
+}
+
+.imgHV{
+    width: 280px;
+    height: 280px;
+}
+
+.tittle_container{
+    width: 100%;
+    display: block;
+    overflow: hidden; /* para que los demas parrafos se escondan */ 
+}
+
+.titles{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.parrafo_container{
+    display: flex;
+    width: 300%;
+    transition: all .5s ease;
+    transform: translateX(0%);
     overflow: hidden;
 }
 
-.slider{
-    background-color: #D93D59;
-    padding: 40px 0;
+.parrafo_container>p{
+    width: calc(300%/3);
+    font-weight: 300;
+    text-align: justify;
 }
 
-/* pondremos display flex para organizar el slider */
-.slider_container{
-    display: grid;
-    grid-template-columns: 50px 1fr 50px; /* aqui seran 50px para el icono, 1fr para la imagen, y 50px para el otro icono  */
+.subtitleHV{
+    position: relative; /* porque usaremos una pseduoclase */
+    cursor: pointer;
 }
 
-.slider_body{
-    /* le decimos a los elementos que empiecen en la linea 2 de la columna y terminen en la 3 */
-    grid-column: 2/3;
-    /* en la fila que empiecen en la linea uno y terminen en la 2 */
-    grid-row: 1/2;
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.subtitleHV::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #70AF31;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 100%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.subtitleHV:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+/* clase con JS */
+
+.border{
+    border-left: 3px solid #70AF31;
+}
+
+
+/*------- CONOCE NUESTRO MENU -------*/
+
+.conoceHV{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 400px;
+    background-image: url(../content/img/edgar-castrejon-J04BD4ysoh8-unsplash-modified.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    text-align: center;
+}
+
+.conoceHV>h2{
+    color: #fff;
+    padding-top: 7%;
+    font-size: 60px;
+    letter-spacing: 2px; 
+    margin-bottom: 150px;
+}
+
+.enlaceHV{
+    padding: 20px 80px; 
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #70AF31;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all .5s;
+     border: 3px solid #45a924;
+}
+
+.enlaceHV:hover{
+    letter-spacing: 5px;
+    color: #6eff3e;
+    border: solid 3px #6eff3e;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #6eff3e ;
+    
+}
+
+/*------- OFERTAS --------- */
+
+.ofertaHV{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.ofertaHV .title_oferta{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.ofertaHV hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #70AF31;
+    margin-bottom: 40px;
+}
+
+.oferta_containerHV{
+    display: flex;
+    gap: 20px; 
+}
+
+.oferta_card{
+    margin-bottom: 50px;
+}
+
+.card_hover{
+    width: 28.5vw;
+    height: 60vh;
+    background-color: #1f3d4738;
+    position: absolute;
+    bottom: -202.8%;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: .5s;
+
 }
 
-.slider_body--mostrar{
+.card_hover:hover{
+    position: absolute;
+    bottom: -203.1%;
     opacity: 1;
 }
+
+.titulo_hover{
+    font-size: 50px;
+}
+
+.texto_hover{
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.oferta_card img{
+    width: 28.5vw;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    
+}
+
+
+.oferta_card>h3{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+.oferta_card >p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+.oferta_card> a{
+    margin-left: 180px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #70AF31;
+    border: 1px solid #45a924;
+    transition: all .4s;
+}
+
+.oferta_card>a:hover{
+    letter-spacing: 1.7px;
+    color: #45a924;
+    border: solid 3px #5ad631;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #5ad631 ;
+}
+
+/* --------CONOCE NUESTRO SABOR ---------- */
+
+.saborHV{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 400px;
+    background-image: url(../content/img/ella-olsson-2IxTgsgFi-s-unsplash-modified.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    text-align: center;
+}
+
+.sabor_title{
+    color: #fff;
+    padding-top: 14%;
+    font-size: 60px;
+    letter-spacing: 2px; 
+    margin-bottom: 150px;
+}
+
+/*-------- TESTIMONIOS -----------*/
+
+.testimonios .title_oferta{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.testimonios hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #70AF31;
+    margin-bottom: 40px;
+}
+
+.slider_test{
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #F7FBF6;
+    box-shadow: 10px 10px 50px 8px rgba(0,0,0,0.14);
+    overflow:hidden ; /* para que se escondan los demas comentarios */
+}
+
+.info_test{
+    display: flex;
+    justify-content: center;
+}
+
+.info_test>a{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000
+}
+
+.info_test .nombre_test{
+    margin-top: 15px;
+}
+
+.slider_test>h3 ,p{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+
+.texto_test{
+    display: flex;
+    padding: 0px 20px 20px 20px;
+}
+
+.texto_test>img{
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 10px 10px 50px 8px rgba(0,0,0,0.14);
+}
+
+.test_container{
+    display: flex;
+    width: 300%;
+    transition: all .5s ease;
+    transform: translateX(0%);
+
+}
+
+.test_container>p{
+    width: calc(300% / 3);
+    font-weight: 300;
+    text-align: justify;
+}
+
+.lugarHV{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lugarHV>h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.lugarHV>hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #70AF31;
+    margin-bottom: 40px;
+}
+
+.lugarHV .lugar_img{
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    margin-left: 25px;
+}
+
+/*-------------- FOOTER ------------*/
+
+.footerHV{
+    display: flex;
+    justify-content: space-around;
+    background-color: #70AF31;
+    color: #fff;
+    
+}
+
+.footerHV .direccion, .telefonos, .redes{
+    margin-top: 15px;
+}
+
+.direccion h3, p{
+    padding: 5px;
+}
+
+.telefonos pre, h3{
+    padding: 5px;
+}
+
+.redes{
+    margin-top: 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.redes>a{
+    padding: 15px;
+    color: #fff;
+}
+
+/************************************ MENU VEGANO **************************************/
+/*---------- BODY--------------- */
+.bodyMV{
+    background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*------- HEADER - NAV -------------*/
+
+.headerMV{
+    height: 10vh;
+    background-color: #F7FBF6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navMV{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 40px;
+    align-items: center;
+}
+
+.iconoMV{
+    margin: 40px; 
+    height: 100px;
+}
+
+.userMV{
+   font-size: 35px;
+   color: #70AF31;
+   text-decoration: none;
+   transition: .3s;
+}
+
+.userMV:hover{
+    font-size: 40px;
+    
+ }
+
+.datoMV{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.datoMV .menuMV{
+    text-decoration: none;
+    font-size: 20px;
+    color: #70AF31;
+    transition: all .3s;
+    
+}
+
+.menuMV:hover{
+    font-size:23px;
+    letter-spacing: 1.5px;
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.datoMV::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #42770c;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.datoMV:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+/* -------- SECTION 1----------- */
+
+.section1MV{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../content/img/food-3433302_1280.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.section1MV>h2 p{
+    margin: 15px;
+}
+
+.section1MV>h2{
+    font-size: 80px;
+    letter-spacing: 20px;
+}
+
+.section1MV>h3 p{
+    font-size: 30px;
+}
+
+/* -------- SECTION 2----------- */
+
+.section2MV{
+    width: 100%;
+    display: flex;
+}
+
+.section2MV .imgMV{
+    width: 75.8vw;
+    height: 350px;
+    object-fit: cover;
+}
+
+.der{
+    flex-direction: row-reverse;
+}
+
+.contenidoMV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoMV>h2{
+    font-size: 40px;
+    color: #70AF31;
+}
+
+.contenidoMV>p{
+    font-size: 1.5em;
+    margin: 35px;
+}
+
+.contenidoMV>a{
+    text-decoration: none;
+    background-color: #70AF31;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.contenidoMV>a:hover{
+    
+    color: #45a924;
+    border: solid 3px #5ad631;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #5ad631 ;
+}
+
+.section3MV{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.PlatosMV{
+    margin-top: 40px;
+}
+
+.infoPMV{
+    margin-top: 20px;
+}
+
+.section3MV h2{
+    color: #70AF31;
+    text-align: center;
+}
+
+.nombrePMV{
+    display: flex;
+    justify-content: space-around;
+    color: #70AF31;
+    font-size: 20px;
+}
+
+.nombrePMV>a{
+    text-decoration: none;
+    color: #fff;
+    background-color:#70AF31;
+    padding: 5px 6px 3px 6px;
+    border-radius: 50px;
+}
+
+.precioMV{
+    display: flex;
+    padding: 0 30px;
+}
+
+.precioMV>span{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 50px;
+    font-weight: bold;
+    color: #70AF31;
+}
+
+.precioMV>p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/************************************* GALERIA VEGANA ***********************************/
+    
+
+.section1GV{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../content/img/roam-in-color-QY1956BJ8DE-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.section2GV{
+    width: 100%;
+    height: 40vh;
+    color: #70AF31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+}
+
+.section3GV{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.section3GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section3GV>img:hover{
+    filter: blur(1px);
+}
+
+.section4GV{
+    margin: 50px auto;
+    width: 100%;
+    height: 52vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    cursor: pointer;
+
+}
+
+.section4GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section4GV>img:hover{
+    filter: blur(1px);
+}
+
+
+
+/*---------- LIGHTBOX ----------*/
+
+.lightbox{
+    position: fixed; /* se sale del flujo y ocupa el espacio indicado */
+    height: 100%;
+    width: 100%;
+    top: 0; /* para utilizar el absolute */
+    left: 0; /* para utilizar el absolute */
+    transform: translateX(-100%);/* para que se vaya a la izquierda y luego mostrarlo con js */
+    background-color: rgba(0, 0, 0, 0.693);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .7s ease;
+
+}
+
+.lightbox>img{
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.fi.fi-br-cross{
+    color: #fff;
+    position: absolute; /* se acomoda de acuerdo al padre directo */
+    top: 20px;
+    right: 40px;
+    background-color: #70AF31;
+    padding: 10px 10px 6px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*------ Clase agregada con js ------*/
+.mostrar{
+    transform: translateX(0%);
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -275,14 +275,14 @@
 }
 
 /*************************************** HOME VEGANO ************************************/
-/* BODY */
+/*---------- BODY--------------- */
 .bodyV{
     background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
 }
 
 
-/* HEADER - NAV */
+/*------- HEADER - NAV -------------*/
 
 .home_headerV{
     height: 10vh;
@@ -522,6 +522,7 @@
     height: 400px;
     background-image: url(../content/img/edgar-castrejon-J04BD4ysoh8-unsplash-modified.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size:cover;
     text-align: center;
 }
@@ -603,12 +604,13 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: .7s;
+    transition: .5s;
 
 }
 
 .card_hover:hover{
-    bottom: -201.8%;
+    position: absolute;
+    bottom: -203.1%;
     opacity: 1;
 }
 
@@ -666,7 +668,7 @@
     box-shadow: 0 0 35px #5ad631 ;
 }
 
-/* ------------CONOCE NUESTRO SABOR ---------------- */
+/* --------CONOCE NUESTRO SABOR ---------- */
 
 .saborHV{
     width: 90%;
@@ -675,6 +677,7 @@
     height: 400px;
     background-image: url(../content/img/ella-olsson-2IxTgsgFi-s-unsplash-modified.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size:cover;
     text-align: center;
 }
@@ -731,15 +734,25 @@
     margin-top: 15px;
 }
 
-.slider_test>h3,p{
+.slider_test>h3 ,p{
     text-align: center;
     margin-bottom: 25px;
     font-size: 15px;
     font-weight: 100;
 }
 
-.slider_test .texto_test{
-    padding: 0px 25px 25px 25px;
+
+.texto_test{
+    display: flex;
+    padding: 0px 20px 20px 20px;
+}
+
+.texto_test>img{
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 10px 10px 50px 8px rgba(0,0,0,0.14);
 }
 
 .test_container{
@@ -818,8 +831,339 @@
     color: #fff;
 }
 
+/************************************ MENU VEGANO **************************************/
+/*---------- BODY--------------- */
+.bodyMV{
+    background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+}
 
+
+/*------- HEADER - NAV -------------*/
+
+.headerMV{
+    height: 10vh;
+    background-color: #F7FBF6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navMV{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 40px;
+    align-items: center;
+}
+
+.iconoMV{
+    margin: 40px; 
+    height: 100px;
+}
+
+.userMV{
+   font-size: 35px;
+   color: #70AF31;
+   text-decoration: none;
+   transition: .3s;
+}
+
+.userMV:hover{
+    font-size: 40px;
     
+ }
+
+.datoMV{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.datoMV .menuMV{
+    text-decoration: none;
+    font-size: 20px;
+    color: #70AF31;
+    transition: all .3s;
+    
+}
+
+.menuMV:hover{
+    font-size:23px;
+    letter-spacing: 1.5px;
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.datoMV::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #42770c;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.datoMV:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+/* -------- SECTION 1----------- */
+
+.section1MV{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../content/img/food-3433302_1280.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.section1MV>h2 p{
+    margin: 15px;
+}
+
+.section1MV>h2{
+    font-size: 80px;
+    letter-spacing: 20px;
+}
+
+.section1MV>h3 p{
+    font-size: 30px;
+}
+
+/* -------- SECTION 2----------- */
+
+.section2MV{
+    width: 100%;
+    display: flex;
+}
+
+.section2MV .imgMV{
+    width: 75.8vw;
+    height: 350px;
+    object-fit: cover;
+}
+
+.der{
+    flex-direction: row-reverse;
+}
+
+.contenidoMV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoMV>h2{
+    font-size: 40px;
+    color: #70AF31;
+}
+
+.contenidoMV>p{
+    font-size: 1.5em;
+    margin: 35px;
+}
+
+.contenidoMV>a{
+    text-decoration: none;
+    background-color: #70AF31;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.contenidoMV>a:hover{
+    
+    color: #45a924;
+    border: solid 3px #5ad631;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #5ad631 ;
+}
+
+.section3MV{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.PlatosMV{
+    margin-top: 40px;
+}
+
+.infoPMV{
+    margin-top: 20px;
+}
+
+.section3MV h2{
+    color: #70AF31;
+    text-align: center;
+}
+
+.nombrePMV{
+    display: flex;
+    justify-content: space-around;
+    color: #70AF31;
+    font-size: 20px;
+}
+
+.nombrePMV>a{
+    text-decoration: none;
+    color: #fff;
+    background-color:#70AF31;
+    padding: 5px 6px 3px 6px;
+    border-radius: 50px;
+}
+
+.precioMV{
+    display: flex;
+    padding: 0 30px;
+}
+
+.precioMV>span{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 50px;
+    font-weight: bold;
+    color: #70AF31;
+}
+
+.precioMV>p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/************************************* GALERIA VEGANA ***********************************/
+    
+
+.section1GV{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../content/img/roam-in-color-QY1956BJ8DE-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.section2GV{
+    width: 100%;
+    height: 40vh;
+    color: #70AF31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+}
+
+.section3GV{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.section3GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section3GV>img:hover{
+    filter: blur(1px);
+}
+
+.section4GV{
+    margin: 50px auto;
+    width: 100%;
+    height: 52vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    cursor: pointer;
+
+}
+
+.section4GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section4GV>img:hover{
+    filter: blur(1px);
+}
+
+
+
+/*---------- LIGHTBOX ----------*/
+
+.lightbox{
+    position: fixed; /* se sale del flujo y ocupa el espacio indicado */
+    height: 100%;
+    width: 100%;
+    top: 0; /* para utilizar el absolute */
+    left: 0; /* para utilizar el absolute */
+    transform: translateX(-100%);/* para que se vaya a la izquierda y luego mostrarlo con js */
+    background-color: rgba(0, 0, 0, 0.693);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .7s ease;
+
+}
+
+.lightbox>img{
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.fi.fi-br-cross{
+    color: #fff;
+    position: absolute; /* se acomoda de acuerdo al padre directo */
+    top: 20px;
+    right: 40px;
+    background-color: #70AF31;
+    padding: 10px 10px 6px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*------ Clase agregada con js ------*/
+.mostrar{
+    transform: translateX(0%);
+}
+
+
 
 
 

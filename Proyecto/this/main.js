@@ -1,5 +1,6 @@
 'use strict'
 
+
 /*LOGIN */
 //seleccionar los elementos HTML
 
@@ -162,5 +163,14 @@ const homeSlider = document.querySelector("#Contenedor_slider"),
             },4000)
         }
       },4000)    
+
+
+
+    
+
+
+
+
+
 
     

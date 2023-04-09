@@ -8,7 +8,7 @@
 /* PALETA DE COLORES */
 /* #70AF31 #fff  */
 
-/* LOGIN */
+/************************************* LOGIN *******************************************/
 
 .main{
     font-family: 'Roboto', sans-serif;
@@ -145,8 +145,10 @@
 }
 
 
+
 /*************************************** INDEX *****************************************/
 .bodyIndex{
+    width: 100vw;
     height: 100vh;
     background-image: url("../content/img/Abstract\ green\ painting\ background.jfif");
     background-position: center;
@@ -171,7 +173,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /* left: 5rem; */
     order: 9;   
 
 }
@@ -279,6 +280,7 @@
 .bodyV{
     background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
 
@@ -734,7 +736,7 @@
     margin-top: 15px;
 }
 
-.slider_test>h3 ,p{
+.slider_test>h3 p{
     text-align: center;
     margin-bottom: 25px;
     font-size: 15px;
@@ -812,7 +814,7 @@
     margin-top: 15px;
 }
 
-.direccion h3, p{
+.direccion h3 p{
     padding: 5px;
 }
 
@@ -830,6 +832,7 @@
     padding: 15px;
     color: #fff;
 }
+
 
 /************************************ MENU VEGANO **************************************/
 /*---------- BODY--------------- */
@@ -1163,6 +1166,1858 @@
     transform: translateX(0%);
 }
 
+
+
+
+/* ***************************************** CARRITO *********************************** */
+
+/*-------------- MODAL --------------*/
+.alerta{
+    width: 40%;
+    background: #70AF31;
+    position: fixed;
+    top: calc(100vh - 95%);
+    left: calc(100vw - 69%);
+    text-align: center; 
+    border-radius: 10px ;
+    padding: 5px;
+    opacity: 0;
+    pointer-events: none; /* para que el modal no nos evite seleccinar otra cosa */
+    
+ }
+ 
+ /* clase que se agregara con js */
+ .alerta--show{
+    opacity: 1;
+    pointer-events: unset;
+ }
+
+ .btnCerrar , .btnContinuar, .btnVaciar{
+    margin: 5px;
+    padding: 7px 7px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+ }
+
+ .btn-danger{
+    padding: 7px 7px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+ }
+
+ .modalBody{
+    max-height: 80vh;
+    width: 100%;
+    height: 85%;
+    border: 2px solid #000;
+    overflow: scroll;
+ }
+
+ .modalParrafo{
+    margin: 50px;
+    font-size: 30px;
+    color: #D93D59;
+    font-style: italic;
+    font-weight: bold;
+ }
+
+ .modal-contenedor{
+    width: 100%;
+    height: 100%;
+    background-color: #D93D59;
+    display: flex;
+    justify-content: center;
+ }
+
+ .modal-contenedor p{
+    font-size: 25px;
+    margin: 20px;
+ }
+
+ .img-carrito{
+    margin-top: 10px;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+ }
+
+
+
+ /*-------- ESTILOS CARD ---------*/
+ .contenedorC{
+    margin: 20px;
+    width: 30vw;
+    height: 60vh; 
+    border-radius: 10px;
+    background-color: #F7FBF6;
+    box-shadow: 0px 0px 15px 0px rgba(18, 141, 32, 0.529);
+ }
+ 
+ .cardC_img{
+    margin-top: 15px;
+    width: 90%;
+    height: 30vh;
+    margin-left: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+ }
+
+ .cardC_body{
+    width: 100%;
+    height: 27.5vh;
+    background-color: #F7FBF6;
+    border-radius: 10px;
+ }
+
+ .cardC_title, .cardC_text, .btnCarrito{
+    margin-left: 30px;
+    margin-bottom: 10px;
+ }  
+ 
+ .cardC_title{
+    padding-top: 15px;
+ }
+
+ .btnCarrito{
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background-color: #70AF31;
+    cursor: pointer;
+ }
+
+ .cardsEstudiantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+
+/* ------------------ MODAL TOTAL --------------- */
+.modal--show{
+    transition: all .5s;
+    transform: translateX(-150%);
+ }
+
+ .modal--mostrar{
+    transform: translateX(0%)!important;
+ }
+
+.modalTotal{
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    background-color: #937a4de2;
+    align-items: center;
+    position: fixed;
+    top: calc(100vh - 100%);
+    left: calc(100vw - 92%);
+    max-height: 90vh;
+    overflow: scroll;
+    transform: translateX(-150%);
+    
+}
+
+.left{
+    width: 40%;
+}
+
+.right{
+    width: 60%;
+}
+
+.right h2{
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+}
+
+.modalTotal input{
+    display: block;
+}
+
+.modal-contenedorT{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    color: #fff;
+}
+
+.img-carritoT{
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.modal-contenedorT p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.infoTotal{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #bcbcbc, 3px 3px 0 #aba4a4;
+    align-items: center;
+    
+}
+
+.infoTotal input{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.571);
+    
+}
+
+.infoTotal2{
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #bcbcbc, 3px 3px 0 #aba4a4;
+    align-items: center;
+    
+}
+
+.input1{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.571);
+}
+
+.input2{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.571);
+}
+
+.infoTotal3{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #bcbcbc, 3px 3px 0 #aba4a4;
+    align-items: center;
+}
+
+.input3{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.571);
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.input4{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.571);
+}
+
+.input3:hover{
+    color: #937a4dc0;
+    background-color:#fff ;
+}
+
+
+.totalCompra{
+    margin-top: 30px;
+    margin-right: 30px;
+    text-align: end;
+    font-size: 20px;
+    color: #fff;
+    border: 1px #fff solid;
+    margin-left: 320px;
+    padding:9px 19px 9px 9px;
+    border-radius: 10px;
+    font-weight: bold;
+    
+    
+}
+
+.modalconfirm{
+    width: 50%;
+    margin: 15% auto;
+    background-color: #d9d9d9eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: fixed;
+    top: calc(100vh - 100%);
+    left: calc(100vw - 80%);
+    transform: translateX(-200%);
+
+}
+
+.modalconfirm img{
+    height: 200px;
+    width: 200px;
+}
+
+.modalconfirm p{
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.cerrarConfirm{
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #D93D59;
+    color: #fff;
+}
+
+/* clase puesta con js */
+.mostar--confirm{
+    transform: translateX(0%);
+}
+
+
+
+ /* **************************** RESERVAS ********************************************* */
+
+ /* --------- TARJETA CLIMA --------- */
+.bodyReserva{
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainReserva{
+    height: 170vh;
+}
+
+ .contenedorClima {
+    padding-top: 20px;
+    height: 38vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.caja1, .caja2, .caja3, .caja4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.caja1 {
+    background-color: #937a4dc0;
+    color:azure;    
+}
+
+.caja1 h2{
+    padding: 4px;
+} 
+
+.caja2 {
+    background-color: #937a4dc0;
+    color:azure;    
+}
+.caja3 {
+    background-color: #937a4dc0;
+    color:azure;    
+}
+
+.caja4{
+    width: 300px;
+    background-color: #937a4dc0;
+    color:azure; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.caja4 h2{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.imgReserva{
+    height: 160px;
+    width: 160px;
+    margin-left: 25px;
+}
+
+.caja4 input{
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+.EnviarClima{
+    margin-top: 20px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.mainReserva{
+
+    background-image: url(../content/img/oliver-timm-haarmann-p6OLZPnq810-unsplash\ \(1\).jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.contenedorReserva {
+    margin-top: 20px;
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contenedorReserva article{
+   color:#fff ;
+   text-shadow: 1px 1px 0 #bcbcbc, 3px 3px 0 #aba4a4;
+   width: 30%;
+   background-color: #d9d9d979;
+   border-radius: 10px;
+    height:55vh ;
+}
+
+.article1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+
+.reservaSubtitulo{
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.hr{
+    width: 30%;
+}
+
+.article1 .elige{
+    display: flex;
+    align-items: center;
+}
+
+.elige input{
+    outline: none;
+    border: none;
+    font-size: 30px;
+    width: 35px;
+    background-color: transparent;
+    margin: 20px;
+}
+
+.article2{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.article2 input{
+    margin-top: 55px;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.article3{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+
+.turnos{
+    display: grid;
+    align-items: center;
+    grid-gap: 20px;
+ 
+}
+
+.time{
+    margin-top: 55px;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.FraseClima{
+    width: 80%;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #937a4dc0;
+    padding: 20px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+
+.infoPersona{
+    margin-top: 30px;
+    width: 75vw;
+    height: auto;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9d9d979;
+}
+
+.infoPersona, .infoNA, .infoTC{
+    padding: 20px;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #bcbcbc, 3px 3px 0 #aba4a4;
+   
+}
+
+.infoNA input{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.infoTC input{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.btnReserva{
+    margin-top: 15px;
+}
+
+.btnReserva input{
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-size: 20px;
+    color: #fff;
+    font-style: italic;
+    background-color: transparent;
+    border: solid 2px #fff;
+    font-weight: bold;
+}
+
+.btnReserva input:hover{
+    color: #937a4dc0;
+    background-color:#fff ;
+}
+
+
+/* clases js */
+.is-valid{
+    border: 2px solid #70AF31 !important;
+}
+
+.is-invalid{
+    border: 2px solid #D93D59 !important;
+}
+
+/* ---------- ALERTA ------------ */
+
+.alertar{
+    width: 30%;
+    height: auto; 
+    background: #937a4dd6;
+    position: fixed;
+    top: calc(100vh - 65%);
+    left: calc(100vw - 65%);
+    text-align: center; 
+    border-radius: 10px;
+    padding: 5px;
+ } 
+ 
+ .textAlertaR{
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    color: aliceblue;
+    font-size: 20px; 
+ }
+ .btnAlertaR{
+    width: 40%;
+    height: auto; 
+    margin-right: 3% ;
+    margin-bottom: 3%;
+    background: rgba(255, 255, 255, 0.57);
+    border: none;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 2%;
+ }
+ .btnAlertaR:hover{
+    background: rgba(255, 255, 255, 0.857);
+}
+
+.cardReserva2{
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cardReserva{
+    border-radius: 10px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #937a4dc0;
+    text-align:center;
+    color: #fff;
+}
+
+.cardReserva p{
+    margin:10px 0px 10px;
+    font-size: 17px;
+    
+}
+
+
+/*MEDIA QUERY*/
+
+@media(min-width: 768px) and (max-width: 1000px) {
+    
+    /* ------------------ INDEX -------------------- */
+    .sectionIndex{
+        margin: 50px;
+        display:flex;
+    }
+
+    .botonesIndex{
+        display: flex;
+    }
+    
+    .sectionIndex h1{
+       font-size: 70px;
+    }
+
+    .img2{
+        width: 500px;
+        height: 500px;
+        margin-top: 200px;
+        padding-left: 70px;
+    }
+
+    .img1{
+        width: 200px;
+        height: 200px;
+        top: 50px;
+    }
+
+    .iconoIndex{
+        margin-top: 700px;
+        left: 100px;
+        z-index: 100;
+    }
+
+    .sectionIndex input{
+        font-size: 31px;
+    }
+
+    /* ------------------ LOGIN -------------------- */
+    .formulario{
+        height: 70%;
+        margin-top: 100px;
+    }
+
+    .container-form{
+       margin-right: 100px;
+    }
+
+
+
+    /* ----------------------------HOME VEGANO ----------------------------------- */
+    .bodyV{
+        width: 100vw;
+    } 
+
+    .home_headerV{
+        height: 5vh;
+        width: 100vw;
+    }
+
+    .iconoHV{
+        height: 65px;
+    }
+
+    .dato .menu {
+        font-size: 20px;
+    }
+
+    .dato{
+        margin: 7px;
+    }
+    .user{
+        font-size: 20px;
+    }
+
+    .Home_slider{
+        height: 30vh;
+    }
+    .slider_img{
+        height: 30vh;
+    }
+
+    .especialidades>h1{
+        font-size: 20px;
+    }
+
+    .containerHV{
+        display: block;
+    }
+
+    .img_container{
+        justify-content: center;
+    }
+
+    .imgHV{
+        height: 250px;
+    }
+    .imgHV2{
+        height: 175px;
+    }
+
+    .conoceHV>h2{
+        font-size: 40px;
+        padding-top: 12%;
+        margin-bottom: 100px;
+    }
+
+    .ofertaHV hr{
+        width: auto;
+    }
+
+    .oferta_containerHV{
+        display: block;
+    }
+
+    .oferta_card img{
+        width: 90vw;
+    }
+
+    .oferta_card>a{
+        margin-left: 500px;
+    }
+
+    .oferta_card>h3{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .oferta_card >p{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .card_hover{
+        width: 90vw;
+        bottom: auto;
+        top: 1540px;
+    }
+
+    .oferta_card>b{
+        font-size: 25px;
+        margin-left: 100px;
+    }
+
+    .sabor_title{
+        font-size: 50px;
+        padding-top: 30%;
+        
+    }
+
+    .testimonios >hr{
+        width: 55vw;
+    }
+
+    .lugarHV>hr{
+        width: auto;
+    }
+
+    .lugarHV .lugar_img{
+        width: 400px;
+    } 
+
+    .redes{
+        font-size: 28px;
+    }
+
+
+    /* ----------------------------------- GALERIA --------------------------------- */
+    .section3GV {
+        width: 85%;
+    }
+
+    .section3GV>img{
+        height: 32vh !important;
+    }
+
+    .section4GV{
+        height: 42vh !important;
+    }
+
+    .section4GV>img{
+        height: 42vh !important;
+    }
+    /* ----------------------------- MENU ---------------------------------------- */
+
+    .section2MV .imgMV{
+        width: 50vw !important;
+    }
+
+    .nombrePMV>a{
+        padding: 0 !important;
+    }
+
+    /*------------------------------- RESERVAS ----------------------------------  */
+    .contenedorClima {
+        height: 25vh;
+        gap: 20px;
+    }
+
+    .contenedorReserva article {
+        height: 35vh;
+    }
+
+    .infoPersona{
+        width: auto;
+    }
+
+  }
+  
+  @media(min-width: 680px) and (max-width: 767px) {
+   
+    /* ------------------ INDEX -------------------- */
+    .sectionIndex{
+        margin: 20px;
+        display:flex;
+    }
+    .fondo2{
+        width: 500px;
+    }
+
+    .botonesIndex{
+        display: flex;
+    }
+    
+    .sectionIndex h1{
+        width: 300px;
+       font-size: 50px;
+        margin-left: 40px;
+    }
+
+    .sectionIndex h2{
+        width: 300px;
+        font-size: 50px;
+        text-align: center;
+        margin-left: 40px;
+     }
+
+    .img2{
+        width: 500px;
+        height: 500px;
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+
+    .img1{
+        width: 200px;
+        height: 200px;
+        top: 50px;
+    }
+
+    .iconoIndex{
+        margin-top: 550px;
+        font-size: 40px;
+        left: 100px;
+        z-index: 100;
+    }
+
+    .sectionIndex input{
+        font-size: 25px;
+        padding: 20px 25px;
+        margin-left: 40px;
+    }
+
+
+    /* ------------------ LOGIN -------------------- */
+    .formulario{
+        height: 80%;
+        margin-top: 30px;
+    }
+
+    .container-form{
+       margin-right: 100px;
+    }
+
+    .icono{
+        margin: 4px;
+        padding: 10px 11px;
+    }
+
+    .formulario>p{
+        margin: 5px;
+        padding-bottom: 10px;
+    }
+
+    .crear-cuenta{
+        font-size: 1.7rem;
+    }
+
+    .formulario input{
+        margin: auto;
+    }
+
+
+     /* ----------------------------HOME VEGANO ----------------------------------- */
+    .bodyV{
+        width: 100vw;
+    } 
+
+    .home_headerV{
+        height: 5vh;
+        width: 100vw;
+    }
+
+    .iconoHV{
+        height: 65px;
+    }
+
+    .dato .menu {
+        font-size: 20px;
+    }
+
+    .dato{
+        margin: 7px;
+    }
+    .user{
+        font-size: 20px;
+    }
+
+    .Home_slider{
+        height: 70vh;
+    }
+    .slider_img{
+        height: 70vh;
+    }
+
+    .especialidades>h1{
+        font-size: 20px;
+    }
+
+    .containerHV{
+        display: block;
+    }
+
+    .img_container{
+        justify-content: center;
+    }
+
+    .imgHV{
+        height: 250px;
+    }
+    .imgHV2{
+        height: 175px;
+    }
+
+    .conoceHV>h2{
+        font-size: 40px;
+        padding-top: 12%;
+        margin-bottom: 100px;
+    }
+
+    .ofertaHV hr{
+        width: auto;
+    }
+
+    .oferta_containerHV{
+        display: block;
+    }
+
+    .oferta_card img{
+        width: 90vw;
+    }
+
+    .oferta_card>a{
+        margin-left: 500px;
+    }
+
+    .oferta_card>h3{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .oferta_card >p{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .card_hover{
+        width: 90vw;
+        bottom: auto;
+        top: 1470px;
+    }
+
+    .oferta_card>b{
+        font-size: 25px;
+        margin-left: 100px;
+    }
+
+    .sabor_title{
+        font-size: 50px;
+        padding-top: 30%;
+        
+    }
+
+    .testimonios >hr{
+        width: 55vw;
+    }
+
+    .lugarHV>hr{
+        width: auto;
+    }
+
+    .lugarHV .lugar_img{
+        width: 400px;
+    } 
+
+    .redes{
+        font-size: 28px;
+    }
+
+    /* ----------------------------------- GALERIA --------------------------------- */
+    .section3GV {
+        width: 85%;
+    }
+
+    .section3GV>img{
+        height: 32vh !important;
+    }
+
+    .section4GV{
+        height: 42vh !important;
+    }
+
+    .section4GV>img{
+        height: 42vh !important;
+    }
+
+    /* ------------------------------ MENI ----------------------------------------- */
+    .section2MV .imgMV{
+        width: 50vw !important;
+    }
+
+    .nombrePMV>a{
+        padding: 0 !important;
+    }
+
+    .precioMV>span{
+        padding-right: 10px;
+    }
+
+    /* ------------------- CARRITO ------------------------------- */
+
+    .cardC_img{
+        margin-left: 10px;
+    }
+
+    /*------------------------------- RESERVAS ----------------------------------  */
+    .contenedorClima {
+        height: auto;
+        gap: 20px ;
+    }
+
+    .contenedorReserva article {
+        height: 40vh;
+    }
+
+    .infoPersona{
+        width: auto;
+    }
+  }
+  
+  @media(min-width: 580px) and (max-width: 679px){
+  
+    /* ------------------ INDEX -------------------- */
+    .sectionIndex{
+        margin: 20px;
+        display:flex;
+    }
+    .fondo2{
+        width: 500px;
+    }
+
+    .botonesIndex{
+        display: flex;
+    }
+    
+    .sectionIndex h1{
+        width: 220px;
+       font-size: 40px;
+        margin-left: 40px;
+    }
+
+    .sectionIndex h2{
+        width: 220px;
+        font-size: 40px;
+        text-align: center;
+        margin-left: 40px;
+     }
+
+    .img2{
+        width: 400px;
+        height: 400px;
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+
+    .img1{
+        width: 180px;
+        height: 180px;
+        top: 50px;
+    }
+
+    .iconoIndex{
+        margin-top: 450px;
+        font-size: 35px;
+        left: 100px;
+        z-index: 100;
+    }
+
+    .sectionIndex input{
+        width: 120px;
+        font-size: 20px;
+        padding: 15px;
+        
+    }
+
+     /* ------------------ LOGIN -------------------- */
+     .formulario{
+        height: 80%;
+        margin-top: 30px;
+    }
+
+    .container-form{
+       margin-right: 100px;
+    }
+
+    .icono{
+        margin: 4px;
+        padding: 8px 9px;
+    }
+
+    .formulario>p{
+        margin: 5px;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .crear-cuenta{
+        font-size: 1.7rem;
+    }
+
+    .formulario input{
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .iconos{
+        margin: 10px;
+    }
+
+
+     /* ----------------------------HOME VEGANO ----------------------------------- */
+     .bodyV{
+        width: 100vw;
+    } 
+
+    .home_headerV{
+        height: 5vh;
+        width: 100vw;
+    }
+
+    .iconoHV{
+        height: 65px;
+    }
+
+    .dato .menu {
+        font-size: 20px;
+    }
+
+    .dato{
+        margin: 7px;
+    }
+    .user{
+        font-size: 20px;
+    }
+
+    .Home_slider{
+        height: 70vh;
+    }
+    .slider_img{
+        height: 70vh;
+    }
+
+    .especialidades>h1{
+        font-size: 20px;
+    }
+
+    .containerHV{
+        display: block;
+    }
+
+    .img_container{
+        justify-content: center;
+    }
+
+    .imgHV{
+        height: 250px;
+    }
+    .imgHV2{
+        height: 175px;
+    }
+
+    .conoceHV>h2{
+        font-size: 40px;
+        padding-top: 12%;
+        margin-bottom: 100px;
+    }
+
+    .ofertaHV hr{
+        width: auto;
+    }
+
+    .oferta_containerHV{
+        display: block;
+    }
+
+    .oferta_card img{
+        width: 90vw;
+    }
+
+    .oferta_card>a{
+        margin-left: 400px;
+    }
+
+    .oferta_card>h3{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .oferta_card >p{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .card_hover{
+        width: 90vw;
+        bottom: auto;
+        top: 1470px;
+    }
+
+    .oferta_card>b{
+        font-size: 25px;
+        margin-left: 100px;
+    }
+
+    .sabor_title{
+        font-size: 50px;
+        padding-top: 30%;
+        
+    }
+
+    .testimonios >hr{
+        width: 55vw;
+    }
+
+    .lugarHV>hr{
+        width: auto;
+    }
+
+    .lugarHV .lugar_img{
+        width: 400px;
+    } 
+
+    .redes{
+        font-size: 28px;
+    }
+
+    /* ----------------------------------- GALERIA --------------------------------- */
+    .headerMV{
+        width: 100%;
+    }
+    .section3GV {
+        width: 85%;
+    }
+
+    .section3GV>img{
+        height: 32vh !important;
+    }
+
+    .section4GV{
+        height: 42vh !important;
+    }
+
+    .section4GV>img{
+        height: 42vh !important;
+    }
+
+    .nav_vegan{
+        margin: 0;
+    }
+
+    .datoMV .menuMV{
+        font-size: 15px !important;
+    }
+
+    /* ------------------------------ MENI ----------------------------------------- */
+    .section2MV .imgMV{
+        width: 50vw !important;
+    }
+
+    .nombrePMV>a{
+        padding: 0 !important;
+        background-color: transparent !important;
+        color: #70AF31 !important;
+    }
+
+    .nombrePMV{
+        font-size: 18px;
+        margin-left: 4%;
+    }
+
+    .precioMV>span{
+        padding-right: 10px;
+    }
+
+     /* ------------------- CARRITO ------------------------------- */
+
+     .cardC_img{
+        margin-left: 10px;
+    }
+
+    /*------------------------------- RESERVAS ----------------------------------  */
+    .contenedorClima {
+        height: auto;
+        gap: 10px ;
+    }
+
+    .contenedorReserva article {
+        height: 35vh;
+    }
+
+    .infoPersona{
+        width: auto;
+    }
+
+    .reservaSubtitulo{
+        font-size: 20px;
+    }
+
+    .caja4 input{
+        padding: 10px 0px;
+        border-radius: 10px;
+    }
+
+    .imgReserva{
+        margin: 0;
+        width: 130px;
+    }
+
+    .infoPersona, .infoNA, .infoTC{
+        padding: 10px;
+    }
+
+    .infoNA input{
+        margin: 0;
+    }
+
+    .infoNA label {
+        font-size: 17px;
+    }
+
+    .infoTC label {
+        font-size: 17px
+    } 
+
+    .infoTC input{
+        margin: 0;
+    }
+
+
+  }
+  
+  @media(min-width: 380px) and (max-width: 579px){
+  
+    .sectionIndex{
+        margin: 20px;
+        display:flex;
+    }
+    .fondo2{
+        width: 500px;
+    }
+
+    .botonesIndex{
+        display: flex;
+    }
+    
+    .sectionIndex h1{
+        width: 220px;
+       font-size: 27px;
+        margin-left: 10px;
+    }
+
+    .sectionIndex h2{
+        width: 220px;
+        font-size: 25px;
+        text-align: center;
+        margin-left: 10px;
+     }
+
+    .img2{
+        width: 250px;
+        height: 250px;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .img1{
+        width: 110px;
+        height: 110px;
+        top: 30px;
+        right: 13rem;
+        
+    }
+
+    .iconoIndex{
+        margin-top: 450px;
+        font-size: 35px;
+        left: 100px;
+        z-index: 100;
+    }
+
+    .sectionIndex input{
+        width: 100px;
+        font-size: 20px;
+        padding: 10px;
+        margin:10px;
+    }
+
+    /* ------------------ LOGIN -------------------- */
+    .formulario{
+        width: 57%;
+        position: relative;
+        height: 90%;
+        margin-top: 30px;
+    }
+
+    .container-form{
+      margin-left: 80px;
+       margin-right: 70px;
+    }
+
+    .icono{
+        margin: 4px;
+        padding: 8px 9px;
+        font-size: 17px;
+    }
+
+    .formulario>p{
+        margin: 5px;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .crear-cuenta{
+        font-size: 20px;
+    }
+
+    .formulario input{
+        margin: auto;
+        font-size: 13px;
+    }
+
+    .iconos{
+        margin: 10px;
+        
+    }
+
+    .mensaje>h2{
+        font-size: 20px;
+    }
+
+    .mensaje>p{
+        font-size: 15px;
+    }
+
+    .btn{
+        font-size: 15px;
+        padding: 6px 8px;
+    }
+
+
+     /* ----------------------------HOME VEGANO ----------------------------------- */
+     .bodyV{
+        width: 137vw;
+    } 
+
+    .home_headerV{
+        height: 5vh;
+        width: 137vw;
+    }
+
+    .iconoHV{
+        height: 40px;
+    }
+
+    .dato .menu {
+        font-size: 15px;
+    }
+
+    .dato{
+        margin: 6px;
+    }
+    .user{
+        font-size: 20px;
+    }
+
+    .Home_slider{
+        height: 70vh;
+    }
+    .slider_img{
+        height: 70vh;
+    }
+
+    .especialidades>h1{
+        font-size: 20px;
+    }
+
+    .containerHV{
+        display: block;
+    }
+
+    .img_container{
+        justify-content: center;
+    }
+
+    .imgHV{
+        height: 250px;
+    }
+    .imgHV2{
+        height: 175px;
+    }
+
+    .conoceHV>h2{
+        font-size: 40px;
+        padding-top: 12%;
+        margin-bottom: 100px;
+    }
+
+    .ofertaHV hr{
+        width: auto;
+    }
+
+    .oferta_containerHV{
+        display: block;
+    }
+
+    .oferta_card img{
+        width: 120vw;
+    }
+
+    .oferta_card>a{
+        margin-left: 300px;
+    }
+
+    .oferta_card>h3{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .oferta_card >p{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .card_hover{
+        width: 120vw;
+        bottom: auto;
+        top: 1470px;
+    }
+
+    .oferta_card>b{
+        font-size: 25px;
+        margin-left: 100px;
+    }
+
+    .sabor_title{
+        font-size: 50px;
+        padding-top: 30%;
+        
+    }
+
+    .testimonios >hr{
+        width: 55vw;
+    }
+
+    .lugarHV>hr{
+        width: auto;
+    }
+
+    .lugarHV .lugar_img{
+        width: 400px;
+    } 
+
+    .redes{
+        font-size: 28px;
+    }
+
+    /* ----------------------------------- GALERIA --------------------------------- */
+    .bodyMV{
+        width: 145vw;
+    }
+
+    .headerMV{
+        width: 145vw;
+        height: 8vh;
+    }
+    .section3GV {
+        width: 85%;
+    }
+
+    .section3GV>img{
+        height: 32vh !important;
+    }
+
+    .section4GV{
+        height: 42vh !important;
+    }
+
+    .section4GV>img{
+        height: 42vh !important;
+    }
+
+    .nav_vegan{
+        margin: 0;
+        padding: 0;
+    }
+
+    .datoMV .menuMV{
+        font-size: 17px !important;
+    }
+
+    .datoMV{
+        margin-right: 0px !important;
+    }
+
+    .iconoMV{
+        height: 80% !important;
+
+    }
+
+    .section1GV{
+        font-size: 35px !important;
+    }
+
+     /* ------------------------------ MENI ----------------------------------------- */
+     .section2MV .imgMV{
+        width: 50vw !important;
+    }
+
+    .nombrePMV>a{
+        padding: 0 !important;
+        background-color: transparent !important;
+        color: #70AF31 !important;
+    }
+
+    .nombrePMV{
+        font-size: 18px;
+        margin-left: 4%;
+    }
+
+    .section2MV .imgMV {
+        height: auto;
+        width: 73vw !important;
+    }
+
+    .contenidoMV>h2 {
+        margin-top: 10px;
+        font-size: 33px;;
+    }
+
+    .contenidoMV>a{
+        margin-bottom: 10px;
+    }
+
+    .precioMV>span{
+        padding-right: 10px;
+    }
+
+     /* ------------------- CARRITO ------------------------------- */
+
+     .cardC_img{
+        margin-left: 10px;
+    }
+
+    .contenedorC{
+        width: 200px;
+    }
+
+    /*------------------------------- RESERVAS ----------------------------------  */
+    .contenedorClima {
+        height: auto;
+        display: inline-block;
+        margin-left: 100px;
+        
+    }
+
+    .contenedorReserva article {
+        height: 35vh;
+    }
+
+    .infoPersona{
+        width: auto;
+    }
+
+    .reservaSubtitulo{
+        font-size: 20px;
+    }
+
+    .caja4 input{
+        padding: 10px 0px;
+        border-radius: 10px;
+    }
+
+    .imgReserva{
+        
+    }
+
+    .infoPersona, .infoNA, .infoTC{
+        padding: 10px;
+    }
+
+    .infoNA input{
+        margin-left: 47px;
+        margin-bottom: 10px;
+    }
+
+    .infoNA label {
+        font-size: 17px;
+    }
+
+    .infoTC label {
+        font-size: 17px
+    } 
+
+    .infoTC input{
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+
+    .caja4{
+        width: 200px;
+    }
+
+    .caja1, .caja2, .caja3, .caja4{
+        margin-bottom: 10px;
+    }
+
+    .article2 input{
+        margin: 0;
+        padding: 0;
+    }
+
+    .time{
+        margin: 0;
+        padding: 0;
+    }
+
+    
+  }
+
+
+
+
+   
+ 
+  
 
 
 

@@ -21,7 +21,7 @@
                     <button class="registrarse-btn btn" id="registrarse-btn">Iniciar Sesion</button>
                 </div>
             </article>
-            <form class="formulario">
+            <form class="formulario" id="registro">
                 <h2 class="crear-cuenta">Crear una cuenta</h2>
                 <div class="iconos">
                     <div class="icono">
@@ -35,10 +35,10 @@
                     </div>
                 </div>
                 <p class="cuenta-gratis">Crear una cuenta gratis</p>
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
-                <input type="button" value="Registrarse">
+                <input id="nombre" type="text" placeholder="Nombre">
+                <input id="email" type="email" placeholder="Email">
+                <input id="contraseña" type="password" placeholder="Contraseña">
+                <input type="submit" value="Registrarse">
             </form>
         </section>
         <section class="container-form iniciar" id="iniciar">
@@ -56,21 +56,22 @@
                     </div>
                 </div>
                 <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Contraseña">
-                <input type="button" value="Iniciar Sesion">
+                <input id="emailR" type="email" placeholder="Email">
+                <input id="contraseñaR" type="password" placeholder="Contraseña">
+                <input type="submit" value="Iniciar Sesion">
             </form>
             <article class="bienvenido">
                 <div class="mensaje">
                     <h2>Bienvenido de nuevo</h2>
-                    <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                    <p>Si aun no tienes una cuenta por favor registrate aqui</p>
                     <button class="iniciar-btn btn" id="iniciar-btn">Registrarse</button>
                 </div>
             </article>
         </section>
     </main>
 
-    <script src="../this/main.js"></script>
+    <script src="../this/login.js"></script>
+ 
 </body>
 
 </html>

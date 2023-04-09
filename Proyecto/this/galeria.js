@@ -1,3 +1,6 @@
+'use strict'
+
+
 /*****************  GALERIA ********************/
 
 const imgGV = document.querySelectorAll("#img"),
@@ -7,8 +10,8 @@ const imgGV = document.querySelectorAll("#img"),
 
       
       imgGV.forEach((img, i) =>{
-        imgGV[i].addEventListener('click', ()=>{
-
+        imgGV[i].addEventListener('click', (e)=>{
+          e.preventDefault();
           //obtendremos los atributos src y alt
           console.log(imgGV[i].getAttribute('src'));
             añadirImagen(img.getAttribute('src'), img.getAttribute('alt')); 

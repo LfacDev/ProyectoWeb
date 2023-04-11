@@ -638,11 +638,11 @@
 }
 
 .card_hover{
+    top: 192%;
     width: 28.5vw;
     height: 60vh;
     background-color: #1f3d4738;
-    position: absolute;
-    bottom: -120.8%;
+    position: absolute;    
     backdrop-filter: blur(5px);
     border-radius: 10px;
     color: #fff;
@@ -650,7 +650,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0;
     transition: .5s;
 
 }
@@ -790,13 +790,16 @@
 
 
 .texto_test{
+    width: 100vw;
     display: flex;
+    justify-content: space-evenly;
     padding: 0px 20px 20px 20px;
+    align-items: center;
 }
 
 .texto_test>img{
-    width: 80px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50px;
     box-shadow: 10px 10px 50px 8px rgba(0,0,0,0.14);
@@ -2710,17 +2713,15 @@
        font-size: 70px;
     }
 
-    .img2{
-        width: 500px;
-        height: 500px;
-        margin-top: 200px;
+    .img2{  
         padding-left: 70px;
     }
 
     .img1{
-        width: 500px;
-        height:     500px;
-        top: 50px;
+        width: 300px;
+        height: 300px;
+        top: 80px;
+        left: 60px;
     }
 
     .iconoIndex{
@@ -2749,6 +2750,10 @@
     .bodyV{
         width: 100vw;
     } 
+
+    .tittle_container{
+        margin: auto;
+    }
 
     .home_headerV{
         height: 5vh;
@@ -2785,9 +2790,12 @@
         display: block;
     }
 
-    .img_container{
+    .img_container {
+        margin: auto;
         justify-content: center;
+        width: 100px;
     }
+
 
     .imgHV{
         height: 250px;
@@ -2831,7 +2839,7 @@
     .card_hover{
         width: 90vw;
         bottom: auto;
-        top: 1540px;
+        top: 1490px;        
     }
 
     .oferta_card>b{
@@ -2886,6 +2894,11 @@
 
     .nombrePMV>a{
         padding: 0 !important;
+    }
+
+    .contenidoMV>h2{
+        
+        text-align: center;
     }
 
     /*------------------------------- RESERVAS ----------------------------------  */
@@ -2964,24 +2977,15 @@
         margin-left: 40px;
     }
 
-    .sectionIndex h2{
-        width: 300px;
-        font-size: 50px;
-        text-align: center;
-        margin-left: 40px;
-     }
-
     .img2{
-        width: 500px;
-        height: 500px;
-        margin-top: 150px;
-        margin-left: 100px;
+        width: 250px;
     }
 
     .img1{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         top: 50px;
+        left: 50%;
     }
 
     .iconoIndex{
@@ -2991,13 +2995,7 @@
         z-index: 100;
     }
 
-    .sectionIndex input{
-        font-size: 25px;
-        padding: 20px 25px;
-        margin-left: 40px;
-    }
-
-
+    
     /* ------------------ LOGIN -------------------- */
     .formulario{
         height: 80%;
@@ -3172,6 +3170,10 @@
     .precioMV>span{
         padding-right: 10px;
     }
+    .contenidoMV>h2{
+        
+        text-align: center;
+    }
 
     /* ------------------- CARRITO ------------------------------- */
 
@@ -3249,43 +3251,27 @@
     }
     
     .sectionIndex h1{
-        width: 220px;
-       font-size: 40px;
+        width: 300px;
+       font-size: 50px;
         margin-left: 40px;
     }
 
-    .sectionIndex h2{
-        width: 220px;
-        font-size: 40px;
-        text-align: center;
-        margin-left: 40px;
-     }
-
     .img2{
-        width: 400px;
-        height: 400px;
-        margin-top: 150px;
-        margin-left: 100px;
+        width: 250px;
     }
 
     .img1{
-        width: 180px;
-        height: 180px;
-        top: 50px;
+        width: 200px;
+        height: 200px;
+        top:25%;
+        left: 70%;
     }
 
     .iconoIndex{
         margin-top: 450px;
-        font-size: 35px;
+        font-size: 40px;
         left: 100px;
         z-index: 100;
-    }
-
-    .sectionIndex input{
-        width: 120px;
-        font-size: 20px;
-        padding: 15px;
-        
     }
 
      /* ------------------ LOGIN -------------------- */
@@ -3331,6 +3317,7 @@
     .home_headerV{
         height: 5vh;
         width: 100vw;
+        justify-content: space-around;
     }
 
     .iconoHV{
@@ -3338,7 +3325,7 @@
     }
 
     .dato .menu {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .dato{
@@ -3409,13 +3396,18 @@
     .card_hover{
         width: 90vw;
         bottom: auto;
-        top: 1470px;
+        top: 1690px;
     }
 
     .oferta_card>b{
         font-size: 25px;
         margin-left: 100px;
     }
+
+    .tittle_container{
+        margin: auto;
+    }
+
 
     .sabor_title{
         font-size: 50px;
@@ -3491,6 +3483,20 @@
         padding-right: 10px;
     }
 
+    .contenidoMV>h2{
+        font-size:25px ;
+        text-align: center;
+    }
+
+    .contenidoMV{
+        font-size: 15px;
+    }
+
+    .datoMV{
+        margin: 8px;
+    }
+
+
      /* ------------------- CARRITO ------------------------------- */
 
      .cardC_img{
@@ -3501,6 +3507,15 @@
     .contenedorClima {
         height: auto;
         gap: 10px ;
+    }
+
+    .datoMR {
+        margin: 8px;
+       
+    }
+
+    .datoMR .menuMR{
+        font-size: 15px;
     }
 
     .contenedorReserva article {
@@ -3550,6 +3565,7 @@
   
   @media(min-width: 380px) and (max-width: 579px){
   
+    /* ------------------ INDEX -------------------- */
     .sectionIndex{
         margin: 20px;
         display:flex;
@@ -3559,49 +3575,49 @@
     }
 
     .botonesIndex{
+        font-size: 20px;
         display: flex;
     }
     
     .sectionIndex h1{
-        width: 220px;
-       font-size: 27px;
-        margin-left: 10px;
+        width: 50%;
+       font-size: 20px; 
+       margin-bottom: 20px;
     }
 
     .sectionIndex h2{
-        width: 220px;
-        font-size: 25px;
-        text-align: center;
-        margin-left: 10px;
-     }
+        width: 50%;
+       font-size: 20px;
+
+    }
 
     .img2{
         width: 250px;
-        height: 250px;
-        margin-top: 100px;
-        margin-left: 100px;
     }
 
-    .img1{
-        width: 110px;
-        height: 110px;
-        top: 30px;
-        right: 13rem;
-        
+    .img1 {
+        width: 150px;
+        height: 150px;
+        top: 15%;
+        left: 50%;
     }
 
-    .iconoIndex{
-        margin-top: 450px;
-        font-size: 35px;
-        left: 100px;
+    .iconoIndex {
+        margin-top: 400px;
+        font-size: 30px;
+        left: 56px;
         z-index: 100;
-    }
+    }   
 
     .sectionIndex input{
-        width: 100px;
-        font-size: 20px;
-        padding: 10px;
-        margin:10px;
+        padding: 15px 20px;
+        font-size: 17px;
+    }
+
+    .articleIndex{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* ------------------ LOGIN -------------------- */
@@ -3665,6 +3681,11 @@
     .home_headerV{
         height: 5vh;
         width: 137vw;
+        justify-content: space-around;
+    }
+
+    .dahl{
+        width: 50vw !important;
     }
 
     .iconoHV{
@@ -3687,6 +3708,10 @@
     }
     .slider_img{
         height: 70vh;
+    }
+
+    .tittle_container{
+        margin: auto;
     }
 
     .especialidades>h1{
@@ -3713,6 +3738,8 @@
         padding-top: 12%;
         margin-bottom: 100px;
     }
+
+    
 
     .ofertaHV hr{
         width: auto;
@@ -3743,7 +3770,11 @@
     .card_hover{
         width: 120vw;
         bottom: auto;
-        top: 1470px;
+        top: 1633px;
+    }
+
+    .texto_test {
+        width: 130vw;
     }
 
     .oferta_card>b{
@@ -3770,7 +3801,7 @@
     } 
 
     .redes{
-        font-size: 28px;
+        font-size: 15px;
     }
 
     /* ----------------------------------- GALERIA --------------------------------- */
@@ -3779,12 +3810,24 @@
     }
 
     .headerMV{
-        width: 145vw;
-        height: 8vh;
+        width: 100vw;
     }
     .section3GV {
         width: 85%;
     }
+
+    .iconoMV{
+        margin: auto;
+        margin-left: 25px;
+    }
+
+    .datoMV {
+        margin: 8px;
+    }
+
+    .userMV{
+        font-size: 20px;    
+    } 
 
     .section3GV>img{
         height: 32vh !important;
@@ -3811,10 +3854,6 @@
         margin-right: 0px !important;
     }
 
-    .iconoMV{
-        height: 80% !important;
-
-    }
 
     .section1GV{
         font-size: 35px !important;
@@ -3864,7 +3903,13 @@
         width: 200px;
     }
 
+    .iconoMV{
+        height: 70px; 
+    }
+
     /*------------------------------- RESERVAS ----------------------------------  */
+
+
     .contenedorClima {
         height: auto;
         display: inline-block;
@@ -3887,10 +3932,6 @@
     .caja4 input{
         padding: 10px 0px;
         border-radius: 10px;
-    }
-
-    .imgReserva{
-        
     }
 
     .infoPersona, .infoNA, .infoTC{

@@ -4,109 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <title>Divine</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Divine Tradicional</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <li><a href="./Home carnivoro.html">Inicio</a></li>
-            <li><a href="./menu-carnivoro.html">Menu</a></li>
-            <li><a href="./galeria-vegano.html">Galeria</a></li>
-            <i></i>
-            <li><a href="./Reservas.html">Reservas</a></li>
+<body class="bodyV">
+    <header class="headerHVT">
+        <img src="../content/logos/logo-divine2.png" alt="icono" class="iconoHV">
+        <nav class="navMV">
+            <li class="datoT inicioT"><a class="menu" href="./Home carnivoro.html">Inicio</a></li>
+            <li class="datoT"><a class="menu" href="./menu-carnivoro.html">Menu</a></li>
+            <li class="datoT"><a class="menu" href="./galeria-vegano.html">Galeria</a></li>
+            <li class="datoT"><a class="menu" href="./Reservas.html">Reservas</a></li>
+            <li class="datoT"><a class="menu" href="./carrito.html">Carrito</a></li>
+            <li><a class="user" href="./login.html"><i class="fi fi-tr-circle-user "></i></a></li>
         </nav>
     </header>
-    <main>
-        <section>
-            <ul>
-                <li>
-                    <img src="../content/img/divine burguer.png" alt="Comida tradicional">
-                </li>
-                <li>
-                    <img src="../content/img/slider 2.jpg" alt="Comida tradicional">
-                </li>
-                <li><img src="../content//img/slider 3.jpg" alt="Comida tradicional"></li>
-            </ul>
-        </section>
-        <section>
-            <h2>
+    <main class="Home_main">
+         <section class="Home_sliderT" >
+            <section class="Contenedor_slider" id="Contenedor_slider">
+                <img src="../content/img/divine burguer (1).png" alt="ds1" class="slider_img">
+                <img src="../content/img/slider 2.jpg" alt="ds2" class="slider_img">
+                <img src="../content/img/slider 3.jpg" alt="ds3" class="slider_img">
+            </section>
+            
+           <ul class="puntos">
+            <li class="puntoT activoT" id="punto"></li>
+            <li class="puntoT" id="punto"></li>
+            <li class="puntoT" id="punto"></li>
+           </ul>
+
+         </section>
+
+        <section class="especialidades">
+            <h1>
                 ESPECIALIDADES DE LA CASA
-            </h2>
-            <div>
-                <img src="../content/img/especial1.jpg" alt="">
-                <img src="../content/img/especial2.jpg" alt="">
-            </div>
-            <div>
-                <h2>PRINCIPALES</h2>
-                <h2>POSTRES</h2>
-                <h2>BEBIDAS</h2>    
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.</p>
-            </div>
+            </h1>
+            <article class="containerHT">
+                <div class="img_container">
+                    <img class="imgHT" src="../content/img/fotor_2023-4-10_20_58_55.png" alt="Comida vegana">
+                    <img class="imgHT2" src="../content/img/fotor_2023-4-10_21_2_43.png" alt="Comida vegana">
+                </div>
+                <div class="tittle_container">
+                    <div class="titles">
+                        <h2 class="subtitleHT" id="subtitle">PRINCIPALES</h2>
+                        <h2 class="subtitleHT" id="subtitle">POSTRES</h2>
+                        <h2 class="subtitleHT" id="subtitle">BEBIDAS</h2>
+                    </div>   
+                    <div class="parrafo_container" id="parrafo_container">
+                        <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt eligendi? Odit animi iure quidem temporibus alias sed illo non recusandae, odio autem eos libero earum labore nulla qui mollitia.</p>
+                        
+                        <p></p>
+                        <p>En nuestra selección de bebidas tenemos una gran variedad de ellas, pasando por vinos importados de gran calidad, como también una selección una de licores nacionales e importados los cuales tienen estándares del alta calidad, y para las personas que no desean bebidas alcohólicas, contamos con un stock amplio de bebidas libres de alcohol y bebidas 100% naturales, hechas con frutas y verduras completamente orgánicas.</p>
+                    </div> 
+                </div>
+            </article>
         </section>
-        <section>
+        <section class="conoceHT">
             <h2>CONOCE NUESTRO MENU</h2>
-            <button>Visitalo</button>
+            <a class="enlaceHT" href="./menu-carnivoro.html">VISITALO</a>
         </section>
-        <section>
-            <h2>
+        <section class="ofertaHT">
+            <h2 class="title_oferta">
                 NUESTRA OFERTA 
             </h2>
             <hr>
-            <div>
-                <img src="../content/img/oferta 1.jpg" alt="">
-                <h3>Parrila gourmet</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <b>25800</b>
-                <button>Reserva</button>
-            </div>
-            <div>
-                <img src="../content/img/oferta 2.jpg" alt="">
-                <h3>Postres y mas</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <b>21000</b>
-                <button>Reserva</button>
-            </div>
-            <div>
-                <img src="../content/img/oferta 3.jpg" alt="">
-                <h3>CVinos y bebidas</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <b>12000</b>
-                <button>Reserva</button>
-            </div>
+            <article class="oferta_containerHV">
+                <div class="oferta_cardT">
+                    <img src="../content/img/fabio-alves-IkcWRgegT3s-unsplash.jpg" alt="Comida Tradicional">
+                    <div class="card_hover">
+                        <h2 class="titulo_hover">Sushi Vegano</h2>
+                        <p class="texto_hover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias et iure recusandae fugit consequuntur error. Voluptatibus nihil repellendus exercitationem voluptates, asperiores ipsa, mollitia quas ducimus similique tenetur eos provident.</p>
+                    </div>
+                    <h3 class="subtitleHT">Sushi and Relax</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <b>25.800</b>
+                    <a href="./reservas.html">Reserva</a>
+                </div>
+                <div class="oferta_cardT">
+                    <img class="oferta_img" src="../content/img/kobby-mendez-idTwDKt2j2o-unsplash.jpg" alt="Comida Tradicional">
+                    <div class="card_hover">
+                        <h2 class="titulo_hover">Tiramisu Frutal</h2>
+                        <p class="texto_hover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias et iure recusandae fugit consequuntur error. Voluptatibus nihil repellendus exercitationem voluptates, asperiores ipsa, mollitia quas ducimus similique tenetur eos provident.</p>
+                    </div>
+                    <h3 class="subtitleHT">Postres y mas</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <b>21.000</b>
+                    <a href="./reservas.html">Reserva</a>
+                </div>
+                <div class="oferta_cardT">
+                    <img src="../content/img/lefteris-kallergis-etWlaoFnTl4-unsplash.jpg" alt="Comida Tradicional">
+                    <div class="card_hover">
+                        <h2 class="titulo_hover">Margaritas</h2>
+                        <p class="texto_hover">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias et iure recusandae fugit consequuntur error. Voluptatibus nihil repellendus exercitationem voluptates, asperiores ipsa, mollitia quas ducimus similique tenetur eos provident.</p>
+                    </div>
+                    <h3 class="subtitleHT">Cocteles y cafe</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                    <b>12.000</b>
+                    <a href="./reservas.html">Reserva</a>
+                </div>
+            </article>
         </section>
-        <section>
-            <h2>EL VERDADERO SABOR</h2>
+        <section class="saborHVT">
+            <h2 class="sabor_title">EL VERDADERO SABOR</h2>
         </section>
-        <section>
-            <h2>TESTIMONIOS</h2>
+        <section class="testimoniosT">
+            <h2 class="title_oferta">TESTIMONIOS</h2>
             <hr>
-            <div>
-                <a href=""></a>
-                <h2>Jorge Montes</h2>
-                <h3>Bogota D.C</h3>
-                <a href=""></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis, </p>
-                <a href=""></a>
-            </div>
+            <section class="slider_test">
+                <article class="info_test">
+                    <a href=""><i class="fi fi-rr-comment-user"></i></a>
+                    <h2 class="nombre_test">Compartenos</h2>
+                </article>
+                <article class="test_container" id="test_container">
+                    <div class="texto_test">
+                        <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis, </p>
+                        <img src="../content/img/test1.jpg" alt="imagen">
+                    </div>
+                    <div class="texto_test">
+                        <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis, </p>
+                        <img src="../content/img/test2.jpg" alt="imagen">
+                    </div>
+                    <div class="texto_test">
+                        <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cum est. Distinctio odit, ratione officiis, </p>
+                        <img src="../content/img/test3.jpg" alt="imagen">
+                    </div>
+                </article>
+            </section>
         </section>
-        <section>
+        <section class="lugarHT">
             <h2>ENCUENTRANOS AQUI</h2>
             <hr>
-            <iframe src="" frameborder="0"></iframe>
-            <img src="../content/img/sarah-hpn4yMPujK4-unsplash.jpg" alt="restaurante">
+           <iframe class="lugar_img" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Calle%20192,%20Bogota,%20Colombia+(La%20divine)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe>
+            <img class="lugar_img" src="../content/img/sarah-hpn4yMPujK4-unsplash.jpg" alt="restaurante">
         </section>
     </main>
 
-    <footer>
-        <h3>Telefonos</h3>
-        <pre>
-            601 5589612
-            601 8854574
-        </pre>
-        <a href=""></a><a href=""></a><a href=""></a>
-        <h3>Direccion</h3>
-        <p>Cll 85 #78 - 25 Chapinero</p>
+    <footer class="footerHT">
+        <div class="telefonos">
+            <h3>Telefonos</h3>
+            <pre>
+601 5589612
+601 8854574
+            </pre>
+        </div>
+        <div class="redes">
+            <a href="linkedin"><i class='bx bxl-linkedin' ></i></a>
+            <a href="instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="facebok"><i class='bx bxl-facebook-circle'></i></a>
+        </div>
+        <div class="direccion">
+            <h3>Direccion</h3>
+            <p>Cll 85 #78 - 25 Chapinero</p>
+        </div>
     </footer>
+    <script type="module" src="../this/main.js"></script>
 </body>
 </html>

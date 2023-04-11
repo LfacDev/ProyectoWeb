@@ -834,6 +834,376 @@
 }
 
 
+
+/*************************************** HOME TRADICIONAL ************************************/
+/*---------- BODY--------------- */
+.bodyT{
+    background-color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+
+/*------- HEADER - NAV -------------*/
+
+.headerHVT{
+    height: 10vh;
+    background-color: #CE2C49;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.iconoHV{
+    margin: 40px; 
+    height: 100px;
+}
+
+
+.datoT{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.datoT.inicioT{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #5f1220 !important;
+ }
+
+.datoT .menu{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: all .3s;
+    
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.datoT::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #5f1220;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.datoT:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+
+
+/*----- SLIDER------ */
+
+/* tamaño contenedor */
+
+
+.Home_sliderT{
+    width: 90%;
+    height: 625px;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    max-width: 120em;
+    overflow: hidden;
+   
+}
+
+.puntoT{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #CE2C49;
+}
+
+.activoT{
+    background-color: #5f1220;
+}
+
+/*---- SECCION ESPECIALIDADES----- */  
+
+.containerHT{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgHT2{
+    width: 200px;
+    height: 200px;
+    margin:15px;
+    transition: all .5s ease;
+    
+}
+
+.imgHT2:hover{
+    width: 250px;
+    height: 250px;
+    margin:15px;
+}
+
+.imgHT{
+    width: 200px;
+    height: 200px;
+    margin:15px;
+    transition: all .5s ease;
+}
+
+.imgHT:hover{
+    width: 250px;
+    height: 250px;
+    margin:15px;
+}
+
+.subtitleHT{
+    position: relative; /* porque usaremos una pseduoclase */
+    cursor: pointer;
+}
+
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.subtitleHT::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #CE2C49;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 100%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.subtitleHT:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+/* clase con JS */
+
+.border{
+    border-left: 3px solid #5f1220;
+}
+
+
+/*------- CONOCE NUESTRO MENU -------*/
+
+.conoceHT{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 400px;
+    background-image: url(../content/img/vitor-monthay-Dj2CFvptGRk-unsplash\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    text-align: center;
+}
+
+.conoceHT>h2{
+    color: #fff;
+    padding-top: 7%;
+    font-size: 60px;
+    letter-spacing: 2px; 
+    margin-bottom: 150px;
+}
+
+.enlaceHT{
+    padding: 20px 80px; 
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #CE2C49;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all .5s;
+     border: 3px solid #5f1220;
+}
+
+.enlaceHT:hover{
+    letter-spacing: 5px;
+    color: #ff483e;
+    border: solid 3px #ff483e;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #ff483e ;
+    
+}
+
+/*------- OFERTAS --------- */
+
+.ofertaHT{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.ofertaHT .title_oferta{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.ofertaHT hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #CE2C49;
+    margin-bottom: 40px;
+}
+
+
+.oferta_cardT img{
+    width: 28.5vw;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    
+}
+
+
+.oferta_cardT>h3{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+.oferta_cardT >p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+.oferta_cardT> a{
+    margin-left: 180px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #CE2C49;
+    border: 1px solid #CE2C49;
+    transition: all .4s;
+}
+
+.oferta_cardT>a:hover{
+    letter-spacing: 1.7px;
+    color: #ff483e;
+    border: solid 3px #ff483e;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #ff483e ;
+}
+
+/* --------CONOCE NUESTRO SABOR ---------- */
+
+.saborHVT{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 400px;
+    background-image: url(../content/img/mae-mu-GIUc-l74UT8-unsplash\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    text-align: center;
+}
+
+
+/*-------- TESTIMONIOS -----------*/
+
+.testimoniosT .title_oferta{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.testimoniosT hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #CE2C49;
+    margin-bottom: 40px;
+}
+
+
+
+.lugarHT{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lugarHT>h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.lugarHT>hr{
+    width: 500px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #CE2C49;
+    margin-bottom: 40px;
+}
+
+.lugarHT .lugar_img{
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    margin-left: 25px;
+}
+
+/*-------------- FOOTER ------------*/
+
+.footerHT{
+    display: flex;
+    justify-content: space-around;
+    background-color: #CE2C49;
+    color: #fff;
+    
+}
+
+.footerHT .direccion, .telefonos, .redes{
+    margin-top: 15px;
+}
+
+.direccion h3 p{
+    padding: 5px;
+}
+
+.telefonos pre, h3{
+    padding: 5px;
+}
+
+.redes{
+    margin-top: 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.redes>a{
+    padding: 15px;
+    color: #fff;
+}
+
+
 /************************************ MENU VEGANO **************************************/
 /*---------- BODY--------------- */
 .bodyMV{
@@ -846,7 +1216,7 @@
 
 .headerMV{
     height: 10vh;
-    background-color: #F7FBF6;
+    background-color: #F5F5F5;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1048,6 +1418,216 @@
 }
 
 
+
+/************************************ MENU TRADICIONAL **************************************/
+/*---------- BODY--------------- */
+.bodyMT{
+    background-color: #FBF6F6;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*------- HEADER - NAV -------------*/
+
+.headerMT{
+    height: 10vh;
+    background-color: #FBF6F6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navMV{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 40px;
+    align-items: center;
+}
+
+.userMT{
+   font-size: 35px;
+   color: #CE2C49;
+   text-decoration: none;
+   transition: .3s;
+}
+
+.userMT:hover{
+    font-size: 40px;
+    
+ }
+
+.datoMT{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.datoMT.menuMTF{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #782c3a8a;
+ }
+
+ .menuMTF.menuMT{
+    color: #fff;
+ } 
+
+.datoMT .menuMT{
+    text-decoration: none;
+    font-size: 20px;
+    color: #CE2C49;
+    transition: all .3s;
+    
+}
+
+.menuMT:hover{
+    font-size:23px;
+    letter-spacing: 1.5px;
+}
+
+/* indicador animado */
+/* after que va a estar despues del contenido */
+.datoMT::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #5f1220;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.datoMT:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+/* -------- SECTION 1----------- */
+
+.section1MT{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../content/img/emerson-vieira-Qi7NlvF-ZsY-unsplash\ \(1\).jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.section1MT>h2 p{
+    margin: 15px;
+}
+
+.section1MT>h2{
+    font-size: 80px;
+    letter-spacing: 20px;
+}
+
+.section1MT>h3 p{
+    font-size: 30px;
+}
+
+/* -------- SECTION 2----------- */
+
+
+.section2MV .imgMV{
+    width: 75.8vw;
+    height: 350px;
+    object-fit: cover;
+}
+
+.der{
+    flex-direction: row-reverse;
+}
+
+.contenidoMT{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoMT>h2{
+    font-size: 40px;
+    color: #CE2C49;
+}
+
+.contenidoMT>p{
+    font-size: 1.5em;
+    margin: 35px;
+}
+
+.contenidoMT>a{
+    text-decoration: none;
+    background-color: #CE2C49;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.contenidoMT>a:hover{
+    
+    color: #ff483e;
+    border: solid 3px #ff483e;
+    background-color: rgba(255, 255, 255, 0.313);
+    box-shadow: 0 0 35px #ff483e ;
+}
+
+.section3MT{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+
+.section3MT h2{
+    color: #CE2C49;
+    text-align: center;
+}
+
+.nombrePMT{
+    display: flex;
+    justify-content: space-around;
+    color: #CE2C49;
+    font-size: 20px;
+}
+
+.nombrePMT>a{
+    text-decoration: none;
+    color: #fff;
+    background-color:#CE2C49;
+    padding: 5px 6px 3px 6px;
+    border-radius: 50px;
+}
+
+.precioMT{
+    display: flex;
+    padding: 0 30px;
+}
+
+.precioMT>span{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 50px;
+    font-weight: bold;
+    color: #CE2C49;
+}
+
+.precioMT>p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
 /************************************* GALERIA VEGANA ***********************************/
     
 
@@ -1069,6 +1649,127 @@
     width: 100%;
     height: 40vh;
     color: #70AF31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+}
+
+.section3GV{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.section3GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section3GV>img:hover{
+    filter: blur(1px);
+}
+
+.section4GV{
+    margin: 50px auto;
+    width: 100%;
+    height: 52vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    cursor: pointer;
+
+}
+
+.section4GV>img{ 
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.44);
+}
+
+.section4GV>img:hover{
+    filter: blur(1px);
+}
+
+
+
+/*---------- LIGHTBOX ----------*/
+
+.lightbox{
+    position: fixed; /* se sale del flujo y ocupa el espacio indicado */
+    height: 100%;
+    width: 100%;
+    top: 0; /* para utilizar el absolute */
+    left: 0; /* para utilizar el absolute */
+    transform: translateX(-100%);/* para que se vaya a la izquierda y luego mostrarlo con js */
+    background-color: rgba(0, 0, 0, 0.693);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .7s ease;
+
+}
+
+.lightbox>img{
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.fi.fi-br-cross{
+    color: #fff;
+    position: absolute; /* se acomoda de acuerdo al padre directo */
+    top: 20px;
+    right: 40px;
+    background-color: #70AF31;
+    padding: 10px 10px 6px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*------ Clase agregada con js ------*/
+.mostrar{
+    transform: translateX(0%);
+}
+
+
+
+
+/************************************* GALERIA VEGANA ***********************************/
+    
+
+.section1GV{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../content/img/galeria/galeria\ 11.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.section2GT{
+    width: 100%;
+    height: 40vh;
+    color: #CE2C49;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1534,6 +2235,61 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.headerMVR{
+    height: 10vh;
+    background-color: #937a4d71;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userMT{
+    font-size: 35px;
+    color: #FFF;
+    text-decoration: none;
+    transition: .3s;
+ }
+ 
+ .userMT:hover{
+     font-size: 40px;
+     
+  }
+
+
+.datoMR{
+    margin: 15px;
+    position: relative; /* porque usaremos una pseduoclase */
+}
+
+.datoMR.menuMTF{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #782c3a8a;
+ }
+.datoMR .menuMR{
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    transition: all .3s;
+}
+
+.datoMR::after{
+    content: ""; /* esto para poder pintar */
+    width: 0;
+    height: 4px;
+    background-color: #937a4dd8;
+    position: absolute; /* para poder posicionarlo de acuerdo a su padre mas cercano (dato) */
+    bottom: 0;/* lo posiciona abajo */
+    right: 50%; /* lo posiciona al centro */
+    transition: all .8s;
+    will-change: width; /* indicarle que espera cambios en el width  */
+}
+
+.datoMR:hover:after{
+    width: 100%;
+    right: 0;
+}
+
 .mainReserva{
     height: 170vh;
 }
@@ -1789,6 +2545,41 @@
 
 .is-invalid{
     border: 2px solid #D93D59 !important;
+}
+
+
+
+/*-------------- FOOTER ------------*/
+
+.footerHV{
+    display: flex;
+    justify-content: space-around;
+    background-color: #937a4d71;
+    color: #fff;
+    
+}
+
+.footerHV .direccion, .telefonos, .redes{
+    margin-top: 15px;
+}
+
+.direccion h3 p{
+    padding: 5px;
+}
+
+.telefonos pre, h3{
+    padding: 5px;
+}
+
+.redes{
+    margin-top: 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.redes>a{
+    padding: 15px;
+    color: #fff;
 }
 
 /* ---------- ALERTA ------------ */
@@ -2060,6 +2851,45 @@
         width: auto;
     }
 
+    /* -------------------------------- CARRITO --------------------------------------- */
+
+    .alerta{
+        width: auto;
+        left: calc(100vw - 75%);
+    }
+
+    .right{
+        width: auto;
+    }
+
+    .modalTotal{
+        display: inline-block;
+    }
+
+    .modalBodyT{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left{
+        width: auto;
+    }
+
+    .contenedorC{
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .cardC_body{
+        height: auto;
+        text-align: center;
+    }
+
+
+    .cardC_title, .cardC_text, .btnCarrito {
+      margin-left: 0;
+    }
+
   }
   
   @media(min-width: 680px) and (max-width: 767px) {
@@ -2311,6 +3141,45 @@
     .infoPersona{
         width: auto;
     }
+
+     /* -------------------------------- CARRITO --------------------------------------- */
+
+     .alerta{
+        width: auto;
+        left: calc(100vw - 75%);
+    }
+
+    .right{
+        width: auto;
+    }
+
+    .modalTotal{
+        display: inline-block;
+    }
+
+    .modalBodyT{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left{
+        width: auto;
+    }
+
+    .contenedorC{
+        width: 40vw;
+        height: 55vh;
+    }
+
+    .cardC_body{
+        height: auto;
+        text-align: center;
+    }
+
+
+    .cardC_title, .cardC_text, .btnCarrito {
+      margin-left: 0;
+    }
   }
   
   @media(min-width: 580px) and (max-width: 679px){
@@ -2521,7 +3390,11 @@
 
     /* ----------------------------------- GALERIA --------------------------------- */
     .headerMV{
-        width: 100%;
+        height: 10vh;
+        background-color: #F7FBF6;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .section3GV {
         width: 85%;

@@ -28,8 +28,8 @@ const img1 = document.querySelector("#img1");
             img1.classList.add("img1T");
 
             //cambiar imagen
-            document.getElementById("img1").src = "./content/img/heather-ford-7x-pVru8hQc-unsplash-removebg-preview.png";
-            document.getElementById("img2").src = "./content/img/vitor-monthay-zqmlcfdxgHQ-unsplash-removebg-preview.png";
+            document.getElementById("img1").src = "./content/img/logoTrad.png";
+            
             
         }else if(e.target === btnVegan){
             mainIndex.classList.remove("fondo2T");
@@ -41,8 +41,8 @@ const img1 = document.querySelector("#img1");
             img1.classList.remove("img1T");
 
             //cambiar imagen
-            document.getElementById("img1").src = "./content/img/Roasted_Tomatillo_Salsa_Verde-removebg-preview.png";
-            document.getElementById("img2").src = "./content/img/sonny-mauricio-yhc4pSbl01A-unsplash-removebg-preview.png";
+            document.getElementById("img1").src = "./content/img/logoVegano.png";
+            
         }
     }); 
 
@@ -178,7 +178,7 @@ contenedorReserva.addEventListener("change",(event)=>{
     //saber cual de los hijos formulo el evento (capturar) se usara target 
     const inputId = event.target.id;
     console.log(inputId);
-    //capturar el valor (no es llo mismo que el content)
+    //capturar el valor (no es lo mismo que el content)
     const inputValue = event.target.value;
     console.log(inputValue);
     //capturar clase 

@@ -6,7 +6,7 @@
 }
 
 /* PALETA DE COLORES */
-/* #70AF31 #fff  */
+/* #70AF31 #fff #D93D59  #937a4d71*/
 
 /************************************* LOGIN *******************************************/
 
@@ -58,7 +58,9 @@
     padding: 20px 35px;
     font-size: 22px;
     border-radius: 50px;
-    background-color: blueviolet;
+    background-color: #42770c;
+    border: none;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -172,9 +174,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; 
     order: 9;   
-
 }
 
 .sectionIndex{
@@ -182,6 +183,8 @@
     margin: 100px;   
     align-items: center;
     text-align: center; 
+    margin-top: 20%;
+    text-shadow: -3px 3px 4px rgba(0,0,0,0.62);
 }
 
 .sectionIndex h1{
@@ -205,11 +208,15 @@
     border: none;
     color: #70AF31;
     cursor: pointer;
+    text-shadow: -2px 2px 2px rgba(0,0,0,0.20);
+    box-shadow: -11px 9px 16px 0px rgba(71,70,71,1);
 }
+
 
 .sectionIndex2{
     width: 20%;
     display: flex;
+    align-items: center;
 }
 
 .img1{
@@ -218,26 +225,21 @@
     height: 250px;
     z-index: 98;
     position: relative;
-    right: 19rem;
+    left: 10rem;
     order: 1;
-}
-
-.img2{
-    width: 700px;
-    height: 700px;
-    z-index: 99;
-    margin-top: 40px;
-    position: relative;
-    right: 6rem;
-    filter:drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5)); 
+ 
 }
 
 .iconoIndex{
-    margin-top: 200px;
+    margin-top: 300px;
     z-index: 97;
     position: relative;
     left: 15rem;
     font-size: 60px;
+}
+
+.iconos .icono{
+    margin: 20px;
 }
 
 .iconoI{
@@ -256,7 +258,7 @@
     transition: unset .3s;
     background:url("../content/img/Download\ wallpaper\ 480x800\ red\,\ background\,\ texture\ nokia\ x\,\ x2\,\ xl\,\ 520\,\ 620\,\ 820\,\ samsung\ galaxy\ star\,\ ace\,\ asus\ zenfone\ 4\ hd\ background.jfif");
     background-repeat: no-repeat;
-    background-size:85%;
+    background-size: cover;
     position: relative;
 }
 
@@ -274,6 +276,26 @@
     position: relative;
     bottom: 7rem;
 }
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario input[type=submit]{
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f5f5a9;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+.formulario input[type=submit]:hover{
+    
+    background-color: #fff;
+}
+
 
 /*************************************** HOME VEGANO ************************************/
 /*---------- BODY--------------- */
@@ -366,7 +388,7 @@
 
 .Home_slider{
     width: 90%;
-    height: 625px;
+    height: auto;
     background-color: rgb(17, 83, 141);
     margin: 0 auto;
     max-width: 120em;
@@ -460,6 +482,7 @@
     width: 100%;
     display: block;
     overflow: hidden; /* para que los demas parrafos se escondan */ 
+    margin: 70px;
 }
 
 .titles{
@@ -521,7 +544,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 50px;
-    height: 400px;
+    height: 450px;
     background-image: url(../content/img/edgar-castrejon-J04BD4ysoh8-unsplash-modified.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -548,6 +571,7 @@
     letter-spacing: 2px;
     transition: all .5s;
      border: 3px solid #45a924;
+     margin-bottom: 10px;
 }
 
 .enlaceHV:hover{
@@ -1001,7 +1025,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 50px;
-    height: 400px;
+    height: 450px;
     background-image: url(../content/img/vitor-monthay-Dj2CFvptGRk-unsplash\ \(1\).jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1028,6 +1052,7 @@
     letter-spacing: 2px;
     transition: all .5s;
      border: 3px solid #5f1220;
+     margin-bottom: 10px;
 }
 
 .enlaceHT:hover{
@@ -1750,10 +1775,10 @@
 
 
 
-/************************************* GALERIA VEGANA ***********************************/
+/************************************* GALERIA TRADICIONAL ***********************************/
     
 
-.section1GV{
+.section1GT{
     width: 100%;
     height: 50vh;
     background-image: url(../content/img/galeria/galeria\ 11.jpg);
@@ -2656,6 +2681,10 @@
         display: flex;
     }
     
+    .fondo2{
+        width: 50%;
+    }
+
     .sectionIndex h1{
        font-size: 70px;
     }
@@ -2668,8 +2697,8 @@
     }
 
     .img1{
-        width: 200px;
-        height: 200px;
+        width: 500px;
+        height:     500px;
         top: 50px;
     }
 

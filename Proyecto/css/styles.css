@@ -1330,6 +1330,7 @@
 }
 
 .contenidoMV{
+    width: 76%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2551,7 +2552,7 @@
 
 /*-------------- FOOTER ------------*/
 
-.footerHV{
+.footerHR{
     display: flex;
     justify-content: space-around;
     background-color: #937a4d71;
@@ -2559,7 +2560,7 @@
     
 }
 
-.footerHV .direccion, .telefonos, .redes{
+.footerHR .direccion, .telefonos, .redes{
     margin-top: 15px;
 }
 

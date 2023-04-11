@@ -36,6 +36,24 @@ class Validate{
         return respuesta;
     }
 
+    validDate(values){
+        if (values.value.length == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    validDate(values){
+        if (values.value.length == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
     validform = (objeto) => {
         //tomar los valores del objeto, se convierte en un arreglo 
         const valores = Object.values(objeto);
